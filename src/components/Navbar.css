@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+body{
+    text-decoration: none;
+    background-color: #fcfcfc;
+    /* 1d2033 */
+}
+.navBar {
+    top: 0px;
+    position: fixed;
+    background-color: #edf0f9; /*#43426e*/
+    width: 100%;
+    height: 50px;
+
+    /* filter: drop-shadow(0px -35px 40px #000); */
+}
+
+
+
+#logo {
+    position: absolute;
+    z-index: 0;
+    top: -4px;
+    left: 25px;
+    transition: 1.2s;
+}
+
+#logoimg{
+    width: 80px;
+    height: 60px;
+    transition: 1.2s;
+}
+
+/* #logoimg:hover{
+    width: 96px;
+    height: 72px;
+    cursor: pointer;
+}
+#logo:hover {
+    top: -12px;
+    left: 25px;
+} */
+
+#avatar {
+    position: absolute;
+    z-index: 0;
+    top: 10px;
+    right: 25px;
+    transition: 0.5s;
+}
+
+#avatarimg{
+
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+}
+
+#avatarimg:hover{
+    opacity: 0.7;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+#avatar:hover{
+    top:12px;
+    right: 27.5px;
+
+
+}
+/* .buttons{
+    position: absolute;
+    top: 6px;
+    right: 50px;
+    float: right;
+    
+}
+
+#btntext {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #373d5d;
+    transition: 0.3s;
+}
+
+#btn{
+    
+    border:none;
+    background: transparent;
+    padding: 10 10 10 10;
+    margin: 0 10 0 10;
+
+}
+#btntext:hover{
+    color:#9b98cf;
+    cursor: pointer;
+} */
+
+#homeicon{
+    position: absolute;
+    top: 14px;
+    right: 185px;
+    float: right;
+    
+    height: 20px;
+    width:20px;
+}
+
+#homeicon g:hover{
+    transition: 0.3s;
+    fill:#9b98cf;
+    cursor: pointer;
+}
+#contesticon{
+    position: absolute;
+    top: 14px;
+    right: 135px;
+    float: right;
+    
+    height: 20px;
+    width:20px;
+}
+
+#contesticon g:hover{
+    transition: 0.3s;
+    fill:#9b98cf;
+    cursor: pointer;
+}
+
+#practiceicon{
+    position: absolute;
+    top: 14px;
+    right: 85px;
+    float: right;
+    
+    height: 20px;
+    width:20px;
+}
+
+#practiceicon g:hover{
+    transition: 0.3s;
+    fill:#9b98cf;
+    cursor: pointer;
+}
+
+
+#notif{
+    position: absolute;
+    top: 9px;
+    right: 22px;
+    float: right;
+    height: 10px;
+    width:10px;
+    stroke: #edf0f9;
+    stroke-width: 100px;
+    transition: 0.5s;
+ 
+}
+#avatar:hover ~ #notif{
+
+    top: 12px;
+    right: 24px;
+
+    height: 8px;
+    width:8px;
+}
+
+/***************************/
+form{
+    position: absolute;
+    top:11px;
+    left: 250px;
+    width: 200px;
+}
+input, button:focus{
+    outline: none;
+}
+.fa{
+    color: #797df8;
+    transition: 0.8s;
+}
+#searchbtntext{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 0 0 0 5px;
+}
+.searchButton{
+
+    background-color: #edf0f9;
+    width: 70px;
+    height: 28px;
+    border-radius: 25px;
+    position: absolute;
+    border: 1px solid #797df8;
+    /* border: 1px solid #b8c2d3; */
+    
+    top:0px;
+    left:260px;
+    transition: 0.8s;
+}
+.searchButton:hover{
+    
+    background-color: #797df8;
+    border: none;
+    cursor: pointer;
+}
+.searchButton:hover > .fa{
+    color:#fff;
+}
+input{
+    font-weight: 400;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    text-indent: 10px;
+    width: 250px;
+    border: 1px solid #d6deea;
+    border-radius: 25px;
+    height: 25px;
+}
+
+input, textarea {
+
+    background-color : #dfe5f4; 
+    color: #373d5d;
+    font-family: 'Source Sans Pro', sans-serif;
+  
+  }
+
+  input::-webkit-input-placeholder{
+      color:#373d5d;
+      opacity: 0.5;
+      font-size: 0.9em;
+  }

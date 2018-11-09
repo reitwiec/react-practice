@@ -1,0 +1,13 @@
+.sidebar{
+    z-index: -1;
+    position: fixed;
+    left:0px;
+    top: 0px;
+    width:200px;
+    height: 100vh;
+    background: #dfe5f4; /* Old browsers */
+background: -moz-linear-gradient(top, #dfe5f4 0%, #fcfcfc 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #dfe5f4 0%,#fcfcfc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #dfe5f4 -15%,#fcfcfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfe5f4', endColorstr='#fcfcfc',GradientType=0 );
+}
