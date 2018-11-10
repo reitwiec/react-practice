@@ -8,7 +8,7 @@ import Notif from './Notif.js';
 import Searchbar from './Searchbar.js';
 import './Navbar.css';
 
-
+var x = "Reitwiec";
 
 class Navbar extends Component {
     render() {
@@ -16,6 +16,7 @@ class Navbar extends Component {
             <div className="navBar">
                 <span id="logo"><img src={logo} alt="" id="logoimg"/></span>
                 <span id="avatar"><img src={avatar} alt="" id="avatarimg"/></span>
+                <span id="unamenav">{x}</span>
                 <Notif/>
                 <Homeicon title="hello"/>
                 <Contesticon/>

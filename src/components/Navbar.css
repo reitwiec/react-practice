@@ -36,13 +36,7 @@ html{
     transition: 1.2s;
 }
 
-#avatar {
-    position: absolute;
-    z-index: 0;
-    top: 10px;
-    right: 25px;
-    transition: 0.5s;
-}
+
 /*-----------------------*/
 
 
@@ -51,6 +45,13 @@ html{
 
 
 /*USER'S PROFILE IMAGE*/
+#avatar {
+    position: absolute;
+    z-index: 0;
+    top: 10px;
+    right: 25px;
+    transition: 0.5s;
+}
 #avatarimg{
     border-radius: 50%;
     width: 30px;
@@ -71,6 +72,8 @@ html{
 }
 
 
+
+
 #notif{
     position: absolute;
     top: 9px;
@@ -89,6 +92,23 @@ html{
     height: 8px;
     width:8px;
 }
+
+#unamenav{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.7em;
+    color:#373d5d;
+    font-weight: 600;
+    position: absolute;
+    z-index: 0;
+    top: 18px;
+    right: 65px;
+    transition: 0.5s;
+
+}
+#avatar:hover ~ #unamenav{
+    color: #797df8;
+    right: 62px;
+}
 /*-----------------------*/
 
 
@@ -99,7 +119,7 @@ html{
 #homeicon{
     position: absolute;
     top: 14px;
-    right: 185px;
+    right: 265px;
     float: right;
     height: 20px;
     width:20px;
@@ -113,7 +133,7 @@ html{
 #contesticon{
     position: absolute;
     top: 14px;
-    right: 135px;
+    right: 215px;
     float: right;
     height: 20px;
     width:20px;
@@ -130,7 +150,7 @@ html{
 #practiceicon{
     position: absolute;
     top: 14px;
-    right: 85px;
+    right: 165px;
     float: right;
     height: 20px;
     width:20px;
