@@ -1,23 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+
+
 body{
     text-decoration: none;
     background-color: #fcfcfc;
-    /* 1d2033 */
 }
+
 html{
-    overflow-x: initial !important;
+    overflow-x: initial !important; //FIXED DOUBLE SCROLL BAR
 }
 .navBar {
     top: 0px;
     position: fixed;
-    background-color: #edf0f9; /*#43426e*/
+    background-color: #edf0f9;
     width: 100%;
     height: 50px;
-
-    /* filter: drop-shadow(0px -35px 40px #000); */
 }
 
 
+
+
+/*IECSE LOGO HERE*/
 
 #logo {
     position: absolute;
@@ -33,16 +36,6 @@ html{
     transition: 1.2s;
 }
 
-/* #logoimg:hover{
-    width: 96px;
-    height: 72px;
-    cursor: pointer;
-}
-#logo:hover {
-    top: -12px;
-    left: 25px;
-} */
-
 #avatar {
     position: absolute;
     z-index: 0;
@@ -50,9 +43,15 @@ html{
     right: 25px;
     transition: 0.5s;
 }
+/*-----------------------*/
 
+
+
+
+
+
+/*USER'S PROFILE IMAGE*/
 #avatarimg{
-
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -69,44 +68,39 @@ html{
 #avatar:hover{
     top:12px;
     right: 27.5px;
-
-
 }
-/* .buttons{
+
+
+#notif{
     position: absolute;
-    top: 6px;
-    right: 50px;
+    top: 9px;
+    right: 22px;
     float: right;
-    
+    height: 10px;
+    width:10px;
+    stroke: #edf0f9;
+    stroke-width: 100px;
+    transition: 0.5s;
+ 
 }
-
-#btntext {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.4em;
-    font-weight: 300;
-    color: #373d5d;
-    transition: 0.3s;
+#avatar:hover ~ #notif{
+    top: 12px;
+    right: 24px;
+    height: 8px;
+    width:8px;
 }
+/*-----------------------*/
 
-#btn{
-    
-    border:none;
-    background: transparent;
-    padding: 10 10 10 10;
-    margin: 0 10 0 10;
 
-}
-#btntext:hover{
-    color:#9b98cf;
-    cursor: pointer;
-} */
+
+
+/*ICONS*/
 
 #homeicon{
     position: absolute;
     top: 14px;
     right: 185px;
     float: right;
-    
     height: 20px;
     width:20px;
 }
@@ -121,7 +115,6 @@ html{
     top: 14px;
     right: 135px;
     float: right;
-    
     height: 20px;
     width:20px;
 }
@@ -139,7 +132,6 @@ html{
     top: 14px;
     right: 85px;
     float: right;
-    
     height: 20px;
     width:20px;
 }
@@ -153,28 +145,13 @@ html{
     cursor: pointer;
 }
 
-#notif{
-    position: absolute;
-    top: 9px;
-    right: 22px;
-    float: right;
-    height: 10px;
-    width:10px;
-    stroke: #edf0f9;
-    stroke-width: 100px;
-    transition: 0.5s;
- 
-}
-#avatar:hover ~ #notif{
+/*--------------------------*/
 
-    top: 12px;
-    right: 24px;
 
-    height: 8px;
-    width:8px;
-}
 
-/***************************/
+
+
+/*SEARCH BAR*/
 form{
     position: absolute;
     top:11px;
@@ -195,21 +172,17 @@ input, button:focus{
     padding: 0 0 0 5px;
 }
 .searchButton{
-
     background-color: #edf0f9;
     width: 70px;
     height: 28px;
     border-radius: 25px;
     position: absolute;
     border: 1px solid #797df8;
-    /* border: 1px solid #b8c2d3; */
-    
     top:0px;
     left:260px;
     transition: 0.8s;
 }
 .searchButton:hover{
-    
     background-color: #797df8;
     border: none;
     cursor: pointer;
@@ -234,11 +207,9 @@ input{
 }
 
 input, textarea {
-
     background-color : #dfe5f4; 
     color: #373d5d;
     font-family: 'Source Sans Pro', sans-serif;
-  
   }
 
   input::-webkit-input-placeholder{
@@ -246,3 +217,4 @@ input, textarea {
       opacity: 0.5;
       font-size: 0.9em;
   }
+/*-----------------------------*/
