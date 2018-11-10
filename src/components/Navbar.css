@@ -111,7 +111,7 @@ html{
     width:20px;
 }
 
-#homeicon g:hover{
+#homeicon:hover > g{
     transition: 0.3s;
     fill:#9b98cf;
     cursor: pointer;
@@ -126,9 +126,11 @@ html{
     width:20px;
 }
 
-#contesticon g:hover{
-    transition: 0.3s;
+#contesticon:hover >g{
     fill:#9b98cf;
+}
+#contesticon:hover{
+    transition: 0.3s;
     cursor: pointer;
 }
 
@@ -142,12 +144,14 @@ html{
     width:20px;
 }
 
-#practiceicon g:hover{
-    transition: 0.3s;
+#practiceicon:hover >g{
     fill:#9b98cf;
+    
+}
+#practiceicon:hover{
+    transition: 0.3s;
     cursor: pointer;
 }
-
 
 #notif{
     position: absolute;
