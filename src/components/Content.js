@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Content.css'
+// Just testing the content part 
 class Content extends Component {
     render() {
         return (
@@ -7,30 +8,11 @@ class Content extends Component {
                 
                 <h1 id="">Contests</h1>
                 <h2 id="">Overview</h2>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
-                <p>Will add contests here</p>
+                {
+                    new Array(35).fill(0).map((_,i)=>(
+                        <p key={i}>Will add contests here</p>
+                    ))
+                }
 
             </div>
         );
