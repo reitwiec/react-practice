@@ -36,6 +36,10 @@ html{
     transition: 1.2s;
 }
 
+#logo:hover{
+    cursor: pointer;
+}
+
 
 /*-----------------------*/
 
@@ -126,11 +130,16 @@ html{
 }
 
 #homeicon:hover > g{
-    transition: 0.3s;
-    fill:#9b98cf;
+    transition: 0.4s;
+    fill:#373d5d;
     cursor: pointer;
 }
+#homeicon:hover{
+    cursor: pointer;
+}
+
 #contesticon{
+    
     position: absolute;
     top: 14px;
     right: 215px;
@@ -140,10 +149,10 @@ html{
 }
 
 #contesticon:hover >g{
-    fill:#9b98cf;
+    transition: 0.4s;
+    fill:#373d5d;
 }
 #contesticon:hover{
-    transition: 0.3s;
     cursor: pointer;
 }
 
@@ -157,11 +166,12 @@ html{
 }
 
 #practiceicon:hover >g{
-    fill:#9b98cf;
+    transition: 0.4s;
+    fill:#373d5d;
     
 }
 #practiceicon:hover{
-    transition: 0.3s;
+
     cursor: pointer;
 }
 
