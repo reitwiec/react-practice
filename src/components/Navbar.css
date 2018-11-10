@@ -7,7 +7,7 @@ body{
 }
 
 html{
-    overflow-x: initial !important; //FIXED DOUBLE SCROLL BAR
+    overflow-x: initial !important; /*FIXED DOUBLE SCROLL BAR*/
 }
 .navBar {
     top: 0px;
