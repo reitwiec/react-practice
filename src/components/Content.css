@@ -2,6 +2,9 @@
 body{
     font-family: 'Source Sans Pro', sans-serif;
 }
+html{
+    overflow-x: initial !important;
+}
 
 div #check{
     display: flex;

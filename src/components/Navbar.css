@@ -4,6 +4,9 @@ body{
     background-color: #fcfcfc;
     /* 1d2033 */
 }
+html{
+    overflow-x: initial !important;
+}
 .navBar {
     top: 0px;
     position: fixed;
