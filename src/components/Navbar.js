@@ -8,7 +8,7 @@ import Notif from './Notif.js';
 import Searchbar from './Searchbar.js';
 import './Navbar.css';
 
-var x = "Reitwiec";
+var x = "Reitwiec S";
 
 class Navbar extends Component {
     render() {

@@ -130,7 +130,7 @@ html{
 }
 
 #homeicon:hover > g{
-    transition: 0.4s;
+    transition: 0.3s;
     fill:#373d5d;
     cursor: pointer;
 }
@@ -149,7 +149,7 @@ html{
 }
 
 #contesticon:hover >g{
-    transition: 0.4s;
+    transition: 0.3s;
     fill:#373d5d;
 }
 #contesticon:hover{
@@ -166,7 +166,7 @@ html{
 }
 
 #practiceicon:hover >g{
-    transition: 0.4s;
+    transition: 0.3s;
     fill:#373d5d;
     
 }
