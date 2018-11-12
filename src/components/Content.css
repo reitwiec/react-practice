@@ -10,7 +10,6 @@ html{
 div #content{
     display: flex;
     position: relative;
-    z-index: -1;
     top: 50px;
     left: 220px;
     flex-direction: column;

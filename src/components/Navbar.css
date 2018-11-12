@@ -9,7 +9,7 @@ body{
 html{
     overflow-x: initial !important; /*FIXED DOUBLE SCROLL BAR*/
 }
-.navBar {
+.navBar { z-index: 1;
     top: 0px;
     position: fixed;
     background-color: #edf0f9;
@@ -24,7 +24,6 @@ html{
 
 #logo {
     position: absolute;
-    z-index: 0;
     top: -4px;
     left: 25px;
     transition: 1.2s;
@@ -51,7 +50,6 @@ html{
 /*USER'S PROFILE IMAGE*/
 #avatar {
     position: absolute;
-    z-index: 0;
     top: 10px;
     right: 25px;
     transition: 0.5s;
@@ -103,7 +101,6 @@ html{
     color:#373d5d;
     font-weight: 600;
     position: absolute;
-    z-index: 0;
     top: 18px;
     right: 65px;
     transition: 0.5s;
