@@ -19,7 +19,7 @@ export default styled(Button)`
 		background-color: #a84df0;
 		width: 70px;
 		height: 28px;
-		border-radius: 25px;
+		border-radius: 6px;
 		transition: 0.5s;
 		margin-top: -0.5em;
 		float: left;

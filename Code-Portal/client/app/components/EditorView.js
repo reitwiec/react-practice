@@ -9,6 +9,15 @@ const hello = () => console.log('You just submitted');
 const EditorView = ({ className, question }) => (
 	<div className={className}>
 		<Content>
+			<div>
+			<NavLink to="/contests"><span className="navigation">All Contests</span></NavLink>
+			<span className="navigation1">&nbsp;&nbsp;>&nbsp;&nbsp;</span>
+			<NavLink to="/questions"><span className="navigation">101 Hack 55</span></NavLink>
+			<span className="navigation1">&nbsp;&nbsp;>&nbsp;&nbsp;</span>
+			<NavLink to="/editor"><span className="navigation">{question.title}</span></NavLink>
+
+			</div>
+			
 		
 			<div>
 				<div className="box">
@@ -99,6 +108,12 @@ export default styled(EditorView)`
 
 
 	.box{
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 		filter: drop-shadow(7px 5px 10px #1b1b2b);
 		margin-bottom: 1.5em;
 		justify-content : space-between;
@@ -108,11 +123,10 @@ export default styled(EditorView)`
 		border-radius:8px;
 		border-radius:4px;
 		background: #a94cf2; /* Old browsers */
-background: -moz-linear-gradient(45deg, #a94cf2 0%, #6f67fc 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(45deg, #a94cf2 0%,#6f67fc 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(45deg, #a94cf2 0%,#6f67fc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a94cf2', endColorstr='#6f67fc',GradientType=1 );}
-	
+		background: -moz-linear-gradient(45deg, #a94cf2 0%, #6f67fc 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(45deg, #a94cf2 0%,#6f67fc 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(45deg, #a94cf2 0%,#6f67fc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a94cf2', endColorstr='#6f67fc',GradientType=1 );}
 .difficulty{
 		color:white;
 		padding-top:15px;
@@ -144,7 +158,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a94cf2', end
         font-size:100px;
         position:absolute;
         opacity:0.02;
-    }
+	}
+	
+	.navigation, .navigation1{
+		font-weight:600;
+		font-size:13px;
+		color:#6a93ff;
+		transition:0.5s;
+	}
+	.navigation1{
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	a{
+		text-decoration:none;
+	}
+	.navigation:hover{
+		color:#fff;
+	}
+	
 
 
 `;

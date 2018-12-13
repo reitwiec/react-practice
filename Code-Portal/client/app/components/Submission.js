@@ -8,7 +8,16 @@ class Submission extends Component {
         return (
             <div className={this.props.className}>
                 <Content>
-                    <h1>Test Cases Result</h1>
+                <div >
+                <NavLink to="/contests"><span className="navigation">All Contests</span></NavLink>
+                <span className="navigation1">&nbsp;&nbsp;>&nbsp;&nbsp;</span>
+                <NavLink to="/questions"><span className="navigation">101 Hack 55</span></NavLink>
+                <span className="navigation1">&nbsp;&nbsp;>&nbsp;&nbsp;</span>
+                <NavLink to="/editor"><span className="navigation">Bon Appétit</span></NavLink>
+                <span className="navigation1">&nbsp;&nbsp;>&nbsp;&nbsp;</span>
+                <NavLink to="/submission"><span className="navigation">Result</span></NavLink>
+                </div>
+                    <h1 className="test">Test Cases Result</h1>
                     <div className="container">
 
                         <div className="column">
@@ -78,6 +87,7 @@ class Submission extends Component {
                     <NavLink to="/editor">
                     <Button >Back</Button>
                     </NavLink>
+                    <div className="beauty"><h1>Result</h1></div>
                 </Content>
             </div>
         );
@@ -85,7 +95,6 @@ class Submission extends Component {
 }
 
 export default styled(Submission)`
-max-width: 150ch;
 h1 {
         color: #fff;
         font-size:2.3em;
@@ -104,7 +113,7 @@ h1 {
       flex-direction  : column;
       justify-content : space-between;
 }
-  span{
+  .column>span{
       padding-bottom:8px;
       font-size:1.1em;
     display         : flex;
@@ -132,4 +141,39 @@ margin-bottom:100px;
 ${Button}{
     margin-top:20px;
 }
+
+.navigation, .navigation1{
+    font-weight:600;
+    font-size:13px;
+    color:#6a93ff;
+    transition:0.5s;
+}
+.navigation1{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+a{
+    text-decoration:none;
+}
+.navigation:hover{
+    color:#fff;
+}
+
+.beauty{
+    color:white;
+    bottom:35px;
+    right:0px;
+    font-size:100px;
+    position:absolute;
+    opacity:0.02;
+}
+
+.test{
+    margin-top:20px;
+}
+
 `;

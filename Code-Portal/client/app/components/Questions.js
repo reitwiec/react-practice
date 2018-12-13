@@ -7,8 +7,16 @@ class Questions extends Component {
     render() {
         return (
             <div className={this.props.className}>
+                
                 <Content>
-                <div className="beauty"><h1>Ques</h1></div>
+                <div>
+                <NavLink to="/contests"><span className="navigation">All Contests</span></NavLink>
+                <span className="navigation1">&nbsp;&nbsp;>&nbsp;&nbsp;</span>
+                <NavLink to="/questions"><span className="navigation">101 Hack 55</span></NavLink>
+                </div>
+                
+                <div className="area">
+                
                     <div className="container">
                     <div className="heading">
                     <h1>101 Hack 55</h1>
@@ -50,6 +58,36 @@ class Questions extends Component {
                     </Button></NavLink>
 
                     </div>
+
+<div className="questions">
+                    <section>Save the Queen!</section>
+                    <span className="details">Max Score: 15</span>
+                    <span className="strength">Difficulty: Easy</span>
+                    <NavLink to="./editor"><Button>
+                            Solve
+                        </Button></NavLink>
+                    
+                    </div><div className="questions">
+                    <section>Save the Queen!</section>
+                    <span className="details">Max Score: 15</span>
+                    <span className="strength">Difficulty: Easy</span>
+                    <NavLink to="./editor"><Button>
+                            Solve
+                        </Button></NavLink>
+                    
+                    </div><div className="questions">
+                    <section>Save the Queen!</section>
+                    <span className="details">Max Score: 15</span>
+                    <span className="strength">Difficulty: Easy</span>
+                    <NavLink to="./editor"><Button>
+                            Solve
+                        </Button></NavLink>
+                    
+                    </div>
+
+
+
+
                     </div>
                     </div>
 
@@ -66,6 +104,9 @@ class Questions extends Component {
                     <span id="lead">Leaderboard</span>
                     </div>
                     </div>
+                </div>
+
+                <div className="beauty"><h1>Ques</h1></div>
                 </Content>
             </div>
         );
@@ -90,7 +131,8 @@ export default styled(Questions)`
             font-size:0.7em;
         }
     
-    ${Content}{
+    .area{
+        margin-top:30px;
         padding-right:100px;
         display:flex;
         justify-content : space-between;
@@ -110,6 +152,7 @@ export default styled(Questions)`
 
     .content{
         filter: drop-shadow(0px 5px 5px #282840);
+        overflow:scroll;
     }
     .strength{
         margin-left:60px;
@@ -132,6 +175,7 @@ export default styled(Questions)`
         background:#363559;
     }
     .container{
+        
         border-radius: 6px;
         background: #2f2f4b; /* Old browsers */
         background: -moz-radial-gradient(center, ellipse cover, #2f2f4b 9%, #26263e 100%); /* FF3.6-15 */
@@ -139,6 +183,7 @@ export default styled(Questions)`
         background: radial-gradient(ellipse at center, #2f2f4b 9%,#26263e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
         width:60%;
+        overflow:scroll;
         height:500px;
         border:none;
         filter: drop-shadow(0 0 0.95rem #1d1e2f);
@@ -146,6 +191,9 @@ export default styled(Questions)`
     border:none;
 
     .heading{
+        z-index: 1;
+        position: sticky;
+	top: 0;
         filter: drop-shadow(0px 5px 5px #282840);
         border-radius: 6px 6px 0 0;
         height:55px;
@@ -225,10 +273,31 @@ export default styled(Questions)`
         line-height:2;
     }
     .beauty{
-        bottom:35px;
+        bottom:85px;
         right:0px;
         font-size:100px;
         position:absolute;
         opacity:0.05;
+    }
+
+    .navigation, .navigation1{
+        font-weight:600;
+        font-size:13px;
+        color:#6a93ff;
+        transition:0.5s;
+    }
+    .navigation1{
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    a{
+        text-decoration:none;
+    }
+    .navigation:hover{
+        color:#fff;
     }
 `;
