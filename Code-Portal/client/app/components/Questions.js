@@ -8,6 +8,7 @@ class Questions extends Component {
         return (
             <div className={this.props.className}>
                 <Content>
+                <div className="beauty"><h1>Ques</h1></div>
                     <div className="container">
                     <div className="heading">
                     <h1>101 Hack 55</h1>
@@ -228,5 +229,12 @@ export default styled(Questions)`
         font-weight:600;
         font-size:1.2em;
         line-height:2;
+    }
+    .beauty{
+        bottom:35px;
+        right:0px;
+        font-size:100px;
+        position:absolute;
+        opacity:0.05;
     }
 `;

@@ -9,6 +9,7 @@ const hello = () => console.log('You just submitted');
 const EditorView = ({ className, question }) => (
 	<div className={className}>
 		<Content>
+		
 			<div>
 				<div className="box">
 				<h2>{question.title}</h2>
@@ -44,6 +45,7 @@ const EditorView = ({ className, question }) => (
 			<NavLink to="/submission">
 			<Button onClick={hello}>Submit</Button>
 				</NavLink>
+				<div className="beauty"><h1>Edit</h1></div>
 		</Content>
 	</div>
 );
@@ -96,7 +98,9 @@ export default styled(EditorView)`
 	}
 
 
-	.box{margin-bottom: 1.5em;
+	.box{
+		filter: drop-shadow(7px 5px 10px #1b1b2b);
+		margin-bottom: 1.5em;
 		justify-content : space-between;
 		display:flex;
 		line-height:30px;
@@ -132,6 +136,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a94cf2', end
 		height: 5px;
 		background-color: #6a93fd;
 	  }
+
+	  .beauty{
+		color:white;
+        bottom:195px;
+        right:0px;
+        font-size:100px;
+        position:absolute;
+        opacity:0.02;
+    }
 
 
 `;
