@@ -1,0 +1,58 @@
+{
+	"name": "code-portal-client-side",
+	"description": "Frontend for IECSE Code Portal",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "rimraf dist && webpack-dev-server --open",
+		"lint": "prettier --write './**/*.{js,jsx,css}'",
+		"build:dev": "rimraf dist && webpack --env dev",
+		"build:prod": "rimraf dist && webpack --env prod"
+	},
+	"author": "IECSE <hello@iecsemanipal.com> (https://iecsemanipal.com)",
+	"contributors": [
+		"Jyotinder Singh",
+		"Reitwiec Shandilya",
+		"Steve Roche",
+		"Surbhi Pachnanda"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Shreyansh97/Code-Portal.git"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"codemirror": "^5.42.0",
+		"react": "^16.6.1",
+		"react-codemirror2": "^5.1.0",
+		"react-dom": "^16.6.1",
+		"react-redux": "^5.1.0",
+		"react-router": "^4.3.1",
+		"react-router-dom": "^4.3.1",
+		"redux": "^4.0.1",
+		"redux-logger": "^3.0.6",
+		"redux-promise": "^0.6.0",
+		"redux-thunk": "^2.3.0",
+		"styled-components": "^4.1.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.1.5",
+		"@babel/plugin-proposal-class-properties": "^7.2.0",
+		"@babel/preset-env": "^7.1.5",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.4",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"clean-terminal-webpack-plugin": "^1.1.0",
+		"css-loader": "^1.0.1",
+		"file-loader": "^2.0.0",
+		"html-webpack-plugin": "^3.2.0",
+		"prettier": "^1.15.3",
+		"rimraf": "^2.6.2",
+		"style-loader": "^0.23.1",
+		"url-loader": "^1.1.2",
+		"webpack": "^4.25.1",
+		"webpack-cli": "^3.1.2",
+		"webpack-dev-server": "^3.1.10",
+		"webpack-merge": "4.1.4"
+	}
+}
