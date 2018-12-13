@@ -18,3 +18,4 @@ export { default as Footer } from './Footer';
 export { default as Submission } from './Submission';
 export { default as Correct } from './Correct';
 export { default as Wrong } from './Wrong';
+export { default as Questions } from './Questions';

@@ -13,6 +13,7 @@ class Footer extends Component {
 
 export default styled(Footer)`
 	text-align: center;
+	flex-shrink:0;
 	span {
 		font-size: 0.8em;
 		line-height: 40px;

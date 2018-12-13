@@ -11,7 +11,8 @@ import {
 	Navbar,
 	Sidebar,
 	Footer,
-	Submission
+	Submission,
+	Questions
 } from 'components';
 
 const question = {
@@ -59,6 +60,10 @@ class App extends Component {
 							<Route
 								path="/submission"
 								component={() => <Submission />}
+							/>
+							<Route
+								path="/questions"
+								component={() => <Questions />}
 							/>
 						</Switch>
 						
