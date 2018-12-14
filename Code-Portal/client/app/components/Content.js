@@ -7,5 +7,5 @@ const Content = ({ className, children }) => (
 
 export default styled(Content)`
 	padding: 1.5em;
-	margin-left: 200px;
+	margin-left: 20px;
 `;

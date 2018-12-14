@@ -53,10 +53,10 @@ export default styled(Navbar)`
 	position: sticky;
 	top: 0;
 	background: #2f2f4b; /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover, #2f2f4b 9%, #282840 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover, #2f2f4b 9%,#282840 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, #2f2f4b 9%,#282840 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#282840',GradientType=1 );
+// background: -moz-radial-gradient(center, ellipse cover, #2f2f4b 9%, #282840 100%); /* FF3.6-15 */
+// background: -webkit-radial-gradient(center, ellipse cover, #2f2f4b 9%,#282840 100%); /* Chrome10-25,Safari5.1-6 */
+// background: radial-gradient(ellipse at center, #2f2f4b 9%,#282840 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#282840',GradientType=1 );
 	width: 100%;
 	height: 50px;
 

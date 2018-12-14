@@ -46,7 +46,7 @@ class App extends Component {
 					<div className={this.props.className}>
 					
 						<Navbar />
-						<Sidebar />
+						{/* <Sidebar /> */}
 						<Switch>
 							<Route
 								path="/contests"

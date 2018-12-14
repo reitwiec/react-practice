@@ -100,6 +100,7 @@ class Questions extends Component {
                     <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 94.667 94.667" width="512px" height="512px">
                     <path d="M82.413,9.146h9.346V83.33h-9.346V9.146z M63.803,11.831l-1.294,0.402c-1.62,0.512-3.524-0.201-4.179-1.558    c-0.314-0.657-0.329-1.383-0.041-2.047c0.334-0.768,1.044-1.369,1.945-1.65l14.591-4.545l1.776,13.001    c0.1,0.662-0.086,1.338-0.525,1.898c-0.537,0.688-1.4,1.134-2.368,1.226c-0.116,0.012-0.246,0.018-0.371,0.018    c-1.651,0-3.053-1.052-3.261-2.444l-0.225-1.967C52.988,37.514,14.157,62.539,12.472,63.617c-0.572,0.366-1.256,0.561-1.98,0.561    c-0.976,0-1.894-0.36-2.517-0.991c-0.573-0.577-0.841-1.313-0.758-2.069c0.087-0.785,0.558-1.507,1.294-1.975    C8.906,58.889,47.367,34.026,63.803,11.831z M74.859,25.623v57.705h-9.344V25.623H74.859z M58.518,42.77v40.56h-9.347V42.77    H58.518z M41.617,60.583v22.744h-9.345V60.583H41.617z M23.75,69.494v13.834h-9.344V69.494H23.75z M94.666,92.234H0V85.3h94.667    L94.666,92.234L94.666,92.234z" fill="#7e7cad"/>
                     </svg>
+                    {/* <span>Hello</span> */}
                     </div>
                     <span id="lead">Leaderboard</span>
                     </div>
@@ -124,7 +125,7 @@ export default styled(Questions)`
         background: radial-gradient(ellipse at center, #2f2f4b 9%,#26263e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
         border:none;
-        filter: drop-shadow(0 0 0.95rem #1d1e2f);
+        filter: drop-shadow(0 0 0.95rem #1f2032);
 }
         .details{
             font-weight:400;
@@ -186,7 +187,7 @@ export default styled(Questions)`
         overflow:scroll;
         height:500px;
         border:none;
-        filter: drop-shadow(0 0 0.95rem #1d1e2f);
+        filter: drop-shadow(0 0 0.95rem #1f2032);
     }
     border:none;
 
@@ -208,11 +209,11 @@ export default styled(Questions)`
         filter: drop-shadow(0px 5px 5px #282840);
         border-radius: 6px 6px 0 0;
         height:55px;
-        background: #333252; /* Old browsers */
-        background: -moz-linear-gradient(45deg, #333252 9%, #2c2b47 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(45deg, #333252 9%,#2c2b47 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(45deg, #333252 9%,#2c2b47 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333252', endColorstr='#2c2b47',GradientType=1 );
+        background: #249ec7; /* Old browsers */
+        background: -moz-linear-gradient(45deg, #249ec7 9%, #4cd0c5 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #249ec7 9%,#4cd0c5 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #249ec7 9%,#4cd0c5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#249ec7', endColorstr='#4cd0c5',GradientType=1 );
     }
     h1{
         line-height:55px;
@@ -223,10 +224,10 @@ export default styled(Questions)`
         font-size:1.2em;
         line-height:55px;
         padding-left:10px;
-        color:#7c7cb2;
+        color:#fff;
     }
     #rank>strong{
-        color: #d7d7ef;
+        color: #fff;
         font-size:1.5em;
     }
     #Capa_1{
@@ -240,32 +241,31 @@ export default styled(Questions)`
         height:45px;
         filter: drop-shadow(2px 5px 5px #282840);
         width:45px;
-        background:#333254;
+        background:#249ec7;
         transition:0.3s;
-    }
-    .box:hover{
-        cursor:pointer;
-        background:#6a93ff;
-    }
-    .box:hover{
         svg{
             path{
                 fill:#fff;
             }
         }
-        
     }
-
+    .box:hover{
+        filter: drop-shadow(0px 0px 8px #1b1b2c);
+        cursor:pointer;
+        border-radius:46px;
+        border: 1px solid white;
+        // background:#249ec7;
+    }
     .otherstat{
         line-height:50px;
         flex-dirextion:row;
         flex-wrap:wrap;
         padding-right:90px;
         margin:20px;
+        position:relative;
         display:flex;
         justify-content:space-between;
     }
-
     #lead{
         color: #d7d7ef;
         font-weight:600;
@@ -277,7 +277,7 @@ export default styled(Questions)`
         right:0px;
         font-size:100px;
         position:absolute;
-        opacity:0.05;
+        opacity:0.02;
     }
 
     .navigation, .navigation1{
