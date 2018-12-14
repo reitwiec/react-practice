@@ -127,7 +127,7 @@ export default styled(Navbar)`
 	#unamenav {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 0.7em;
-		color: #605f8a;
+		color: #78a5fe;
 		font-weight: 600;
 		position: absolute;
 		top: 18px;
@@ -135,8 +135,7 @@ export default styled(Navbar)`
 		transition: 0.5s;
 	}
 
-	#avatar:hover ~ #unamenav,#unamenav:hover {
-		color: #78a5fe;
+	#avatar:hover ~ #unamenav {
 		right: 62px;
 	}
 `;

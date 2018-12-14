@@ -1,33 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 import { Button, Content, Editor, Sidebar } from 'components';
 
 const hello = () => console.log('You just submitted');
-
-const EditorView = ({ className, question }) => (
-	<div className={className}>
+class EditorView extends Component {
+	componentDidMount(){
+		var elem = document.getElementById("myBar"); 
+		var width = 1;
+		var id = setInterval(frame, 10);
+		function frame() {
+			if (width >= 30) {
+			clearInterval(id);
+			} else {
+			width=width+0.2; 
+			elem.style.width = width + '%'; 
+			}
+  }
+	}
+	render(){
+		return(
+			<div className={this.props.className}>
 		<Content>
 			<div>
 			<NavLink to="/contests"><span className="navigation">All Contests</span></NavLink>
 			<span className="navigation1">&nbsp;&nbsp;>&nbsp;&nbsp;</span>
 			<NavLink to="/questions"><span className="navigation">101 Hack 55</span></NavLink>
 			<span className="navigation1">&nbsp;&nbsp;>&nbsp;&nbsp;</span>
-			<NavLink to="/editor"><span className="navigation">{question.title}</span></NavLink>
+			<NavLink to="/editor"><span className="navigation">{this.props.question.title}</span></NavLink>
 
 			</div>
 			
 		
 			<div>
 				<div className="box">
-				<h2>{question.title}</h2>
+				<h2>{this.props.question.title}</h2>
+				<span className="fadebg1">{this.props.question.submissions}</span>
 				</div>
 				<div id="myProgress">
 				<div id="myBar"></div>
 				</div>
 				<span className="difficulty"><strong>Difficulty: </strong>  Easy</span>
-				<section>{question.body}</section>
+				<section>{this.props.question.body}</section>
 				<hr/>
 				
 
@@ -39,16 +54,16 @@ const EditorView = ({ className, question }) => (
 				</svg>
 				</div>
 				
-				<section>{question.input_format}</section>
+				<section>{this.props.question.input_format}</section>
 				<div className="box1">
 				<h3>Constraints</h3>
 				</div>
 				
-				<section>{question.constraints}</section>
+				<section>{this.props.question.constraints}</section>
 
 				<div className="box1"><h3>Output Format</h3></div>
 				
-				<section>{question.output_format}</section>
+				<section>{this.props.question.output_format}</section>
 			</div>
 			<Editor />
 			<NavLink to="/submission">
@@ -57,9 +72,23 @@ const EditorView = ({ className, question }) => (
 				<div className="beauty"><h1>Edit</h1></div>
 		</Content>
 	</div>
-);
+		)
+	}
+};
 
 export default styled(EditorView)`
+.fadebg1{
+    padding-left:10px;
+    opacity:0.23;
+    color:white;
+    font-weight:900;
+    z-index:-1;
+    font-size:70px;
+    bottom:-1px;
+    left:-10px;
+    position:absolute;
+}
+
 	max-width: 150ch;
 	h2,
 	h3 {
@@ -96,7 +125,7 @@ export default styled(EditorView)`
 
 	.box1{
 		display:flex;
-		width:16%;
+		width:13%;
 		align-items:center;
 		justify-content:space-between;
 	}
@@ -108,6 +137,7 @@ export default styled(EditorView)`
 
 
 	.box{
+		overflow:hidden;
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
 		-khtml-user-select: none;
@@ -148,7 +178,7 @@ export default styled(EditorView)`
 		border-radius:3px 0 0 3px;
 		width: 30%;
 		height: 5px;
-		background-color: #6a93fd;
+		background-color: #6b9cfd;
 	  }
 
 	  .beauty{

@@ -34,7 +34,8 @@ b: the amount of money that Anna contributed to the bill`,
 	input_format:
 		'The first line contains two space-separated integers  and , the number of items ordered and the -based index of the item that Anna did not eat.  The second line contains  space-separated integers  where .  The third line contains an integer, , the amount of money that Brian charged Anna for her share of the bill.',
 	output_format:
-		'If Brian did not overcharge Anna, print Bon Appetit on a new line; otherwise, print the difference (i.e., ) that Brian must refund to Anna. This will always be an integer.'
+		'If Brian did not overcharge Anna, print Bon Appetit on a new line; otherwise, print the difference (i.e., ) that Brian must refund to Anna. This will always be an integer.',
+		submissions:1289
 };
 
 class App extends Component {

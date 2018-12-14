@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Content, Correct, Wrong, Button} from 'components';
+import { Content, Correct, Wrong, Button, Gauge} from 'components';
 import { NavLink } from 'react-router-dom';
 
 class Submission extends Component {
@@ -63,24 +63,29 @@ class Submission extends Component {
                             <span>30<Wrong/></span>
                         </div>
                     </div>
+                    <hr/>
 
-                    <div className="container">
+                    <div className="container1">
                     <div className="column">
                     <h3>Your Score</h3>
-                    <section>9.35/15.00</section>
-                    </div>
-                    
-                    <div className="column">
-                    <h3>Run Time</h3>
-                    <section>2.3ms</section>
+                    <section>
+                        9.35/15.00
+                    </section>
+                    <Gauge color="#ea2d78" size="3em" percentage={9.35 / 15.0} />
                     </div>
                     
                     <div className="column">
                     <h3>Your Accuracy</h3>
                     <section>73%</section>
+                    <Gauge color="#0f0" size="3em" percentage={73.0 / 100.0} />
                     
 
                     </div>
+                    
+                    </div>
+                    <div className="run">
+                    <h3>Run Time</h3>
+                    <section>2.3ms</section>
                     </div>
                     
 
@@ -95,6 +100,10 @@ class Submission extends Component {
 }
 
 export default styled(Submission)`
+hr{
+    opacity:0.5;
+    width:60%;
+}
 h1 {
         color: #fff;
         font-size:2.3em;
@@ -103,9 +112,22 @@ h1 {
     
 .container{
     margin-top:30px;
+    padding:10px;
     display: flex;
     width: 800px;
     justify-content : space-between;
+
+}
+.run{
+    margin-top:50px;
+}
+.container1{
+    margin-top:30px;
+    display: flex;
+    width: 400px;
+    justify-content : space-between;
+    height:150px;
+
 }
 .column{
     align-items:center;
@@ -139,7 +161,7 @@ section{
 }
 margin-bottom:100px;
 ${Button}{
-    margin-top:20px;
+    margin-top:40px;
 }
 
 .navigation, .navigation1{

@@ -4,6 +4,7 @@ import { Button, Content } from 'components';
 import {NavLink} from 'react-router-dom';
 
 class Questions extends Component {
+    
     render() {
         return (
             <div className={this.props.className}>
@@ -20,6 +21,7 @@ class Questions extends Component {
                     <div className="container">
                     <div className="heading">
                     <h1>101 Hack 55</h1>
+                    <span className="fadebg1">Head</span>
                     </div>
                     <div className="content">
                     <div className="questions">
@@ -94,13 +96,14 @@ class Questions extends Component {
                     <div className="stats">
                     <div className="heading1">
                     <span id="rank">Current Rank: <strong>13</strong></span> 
+                    <span className="fadebg1">Win</span>
                     </div>
                     <div className="otherstat">
                         <div className="box">
                     <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 94.667 94.667" width="512px" height="512px">
                     <path d="M82.413,9.146h9.346V83.33h-9.346V9.146z M63.803,11.831l-1.294,0.402c-1.62,0.512-3.524-0.201-4.179-1.558    c-0.314-0.657-0.329-1.383-0.041-2.047c0.334-0.768,1.044-1.369,1.945-1.65l14.591-4.545l1.776,13.001    c0.1,0.662-0.086,1.338-0.525,1.898c-0.537,0.688-1.4,1.134-2.368,1.226c-0.116,0.012-0.246,0.018-0.371,0.018    c-1.651,0-3.053-1.052-3.261-2.444l-0.225-1.967C52.988,37.514,14.157,62.539,12.472,63.617c-0.572,0.366-1.256,0.561-1.98,0.561    c-0.976,0-1.894-0.36-2.517-0.991c-0.573-0.577-0.841-1.313-0.758-2.069c0.087-0.785,0.558-1.507,1.294-1.975    C8.906,58.889,47.367,34.026,63.803,11.831z M74.859,25.623v57.705h-9.344V25.623H74.859z M58.518,42.77v40.56h-9.347V42.77    H58.518z M41.617,60.583v22.744h-9.345V60.583H41.617z M23.75,69.494v13.834h-9.344V69.494H23.75z M94.666,92.234H0V85.3h94.667    L94.666,92.234L94.666,92.234z" fill="#7e7cad"/>
                     </svg>
-                    {/* <span>Hello</span> */}
+                    <span className="tooltiptext1">Check Leaderboard</span>
                     </div>
                     <span id="lead">Leaderboard</span>
                     </div>
@@ -115,6 +118,17 @@ class Questions extends Component {
 }
 
 export default styled(Questions)`
+.fadebg1{
+    padding-left:10px;
+    opacity:0.23;
+    color:white;
+    font-weight:900;
+    z-index:-1;
+    font-size:70px;
+    bottom:-30px;
+    left:-10px;
+    position:absolute;
+}
 .stats{
     width:300px;
     height: 300px;
@@ -144,10 +158,12 @@ export default styled(Questions)`
     ${Button}{
         top:20px;
         right:10px;
+        transition:0.4s;
         position:absolute;
         background:#fd6b9a;
     }
     ${Button}:hover{
+
         background:#f77f6e;
     }
 
@@ -192,6 +208,7 @@ export default styled(Questions)`
     border:none;
 
     .heading{
+        overflow:hidden;
         z-index: 1;
         position: sticky;
 	top: 0;
@@ -206,6 +223,7 @@ export default styled(Questions)`
     }
     .heading1{
         text-align:center;
+        overflow:hidden;
         filter: drop-shadow(0px 5px 5px #282840);
         border-radius: 6px 6px 0 0;
         height:55px;
@@ -236,26 +254,58 @@ export default styled(Questions)`
         height:35px;
     }
     .box{
+        position:relative;
         border-radius:6px;
         text-align:center;
         height:45px;
         filter: drop-shadow(2px 5px 5px #282840);
         width:45px;
         background:#249ec7;
-        transition:0.3s;
+        transition:0.5s;
         svg{
             path{
                 fill:#fff;
             }
         }
     }
+
+    .tooltiptext1 {
+        visibility: hidden;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        line-height:1.5;
+       
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+        width: 120px;
+        top: 130%;
+        left: 50%; 
+        margin-left: -60px;
+    }
+
     .box:hover{
         filter: drop-shadow(0px 0px 8px #1b1b2c);
         cursor:pointer;
         border-radius:46px;
         border: 1px solid white;
-        // background:#249ec7;
+        .tooltiptext1 {
+            visibility: visible;
+          }
     }
+    .tooltiptext1::after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;  /* At the top of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+      }
     .otherstat{
         line-height:50px;
         flex-dirextion:row;
