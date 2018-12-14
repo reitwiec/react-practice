@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900');
+	@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
 
 	* {
 		box-sizing: border-box;

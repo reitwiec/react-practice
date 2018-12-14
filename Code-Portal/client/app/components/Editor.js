@@ -112,7 +112,7 @@ export default styled(Editor)`
 		background-color: #24212b;
 	}
 	.CodeMirror{
-		font-family: Menlo;
+		font-family: 'Inconsolata', monospace;
 		font-size:0.8em;
 	}
 `;
