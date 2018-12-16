@@ -12,7 +12,7 @@ class Gauge extends Component {
 				cx="50%"
 				cy="50%"
 				stroke="#f6f6f6"
-				stroke-width="9%"
+				strokeWidth="9%"
 				fill="none"
 			/>
 			<circle
@@ -21,9 +21,9 @@ class Gauge extends Component {
 				cx="50%"
 				cy="50%"
 				stroke={this.props.color}
-				stroke-width="10%"
-				stroke-dasharray={`${this.props.percentage * 100} 100`}
-				stroke-linecap="round"
+				strokeWidth="10%"
+				strokeDasharray={`${this.props.percentage * 100} 100`}
+				strokeLinecap="round"
 				transform="rotate(-90)"
 				fill="none"
 			/>

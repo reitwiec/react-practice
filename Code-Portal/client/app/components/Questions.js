@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import { Button, Content } from 'components';
+import styled ,{keyframes} from 'styled-components';
+import { Navbar,Button, Content } from 'components';
 import {NavLink} from 'react-router-dom';
 
 class Questions extends Component {
@@ -8,7 +8,7 @@ class Questions extends Component {
     render() {
         return (
             <div className={this.props.className}>
-                
+                <Navbar />
                 <Content>
                 <div>
                 <NavLink to="/contests"><span className="navigation">All Contests</span></NavLink>
@@ -19,6 +19,7 @@ class Questions extends Component {
                 <div className="area">
                 
                     <div className="container">
+                    
                     <div className="heading">
                     <h1>101 Hack 55</h1>
                     <span className="fadebg1">Head</span>
@@ -91,7 +92,7 @@ class Questions extends Component {
 
 
                     </div>
-                    </div>
+                </div>
 
                     <div className="stats">
                     <div className="heading1">
@@ -117,6 +118,43 @@ class Questions extends Component {
     }
 }
 
+var check = keyframes`
+0%{
+    transform: translateY(-30px);
+    opacity:0;
+}
+100%{
+    transform: translateY(0px);
+    opacity:1;
+
+}
+`;
+var check1 = keyframes`
+0%{
+    transform: translateY(30px);
+    opacity:0;
+}
+100%{
+    transform: translateY(0px);
+    opacity:1;
+
+}
+`;
+
+
+var Gradient = keyframes`
+0% {
+    background-position: 0% 50%
+}
+50% {
+    background-position: 100% 50%
+}
+100% {
+    background-position: 0% 50%
+}
+`;
+
+
 export default styled(Questions)`
 .fadebg1{
     padding-left:10px;
@@ -140,6 +178,7 @@ export default styled(Questions)`
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
         border:none;
         filter: drop-shadow(0 0 0.95rem #1f2032);
+        animation: ${check1} 3s ease 1;
 }
         .details{
             font-weight:400;
@@ -169,7 +208,7 @@ export default styled(Questions)`
 
     .content{
         filter: drop-shadow(0px 5px 5px #282840);
-        overflow:scroll;
+        
     }
     .strength{
         margin-left:60px;
@@ -200,10 +239,9 @@ export default styled(Questions)`
         background: radial-gradient(ellipse at center, #2f2f4b 9%,#26263e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
         width:60%;
-        overflow:scroll;
-        height:500px;
         border:none;
         filter: drop-shadow(0 0 0.95rem #1f2032);
+        animation: ${check} 3s ease 1;
     }
     border:none;
 
@@ -211,15 +249,14 @@ export default styled(Questions)`
         overflow:hidden;
         z-index: 1;
         position: sticky;
-	top: 0;
+	    top: 0;
         filter: drop-shadow(0px 5px 5px #282840);
         border-radius: 6px 6px 0 0;
         height:55px;
-        background: #fd6b9a; /* Old browsers */
-        background: -moz-linear-gradient(45deg, #fd6b9a 9%, #f77f6e 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(45deg, #fd6b9a 9%,#f77f6e 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(45deg, #fd6b9a 9%,#f77f6e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd6b9a', endColorstr='#f77f6e',GradientType=1 );
+
+        background: linear-gradient(45deg, #fd6b9a, #f77f6e);
+        background-size: 400% 400%;
+        animation: ${Gradient} 3s ease infinite;
     }
     .heading1{
         text-align:center;
@@ -227,11 +264,9 @@ export default styled(Questions)`
         filter: drop-shadow(0px 5px 5px #282840);
         border-radius: 6px 6px 0 0;
         height:55px;
-        background: #249ec7; /* Old browsers */
-        background: -moz-linear-gradient(45deg, #249ec7 9%, #4cd0c5 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(45deg, #249ec7 9%,#4cd0c5 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(45deg, #249ec7 9%,#4cd0c5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#249ec7', endColorstr='#4cd0c5',GradientType=1 );
+        background: linear-gradient(45deg, #249ec7, #4cd0c5);
+        background-size: 400% 400%;
+        animation: ${Gradient} 3s ease infinite;
     }
     h1{
         line-height:55px;

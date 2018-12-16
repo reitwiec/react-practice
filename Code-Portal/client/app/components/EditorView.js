@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled,{keyframes} from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-import { Button, Content, Editor, Sidebar } from 'components';
+import { Button, Content, Editor, Navbar } from 'components';
 
 const hello = () => console.log('You just submitted');
 class EditorView extends Component {
@@ -22,6 +22,7 @@ class EditorView extends Component {
 	render(){
 		return(
 			<div className={this.props.className}>
+			<Navbar />
 		<Content>
 			<div>
 			<NavLink to="/contests"><span className="navigation">All Contests</span></NavLink>
@@ -76,7 +77,26 @@ class EditorView extends Component {
 	}
 };
 
+var Gradient = keyframes`
+0% {
+    background-position: 0% 50%
+}
+50% {
+    background-position: 100% 50%
+}
+100% {
+    background-position: 0% 50%
+}
+`;
+
+
+
+
+
 export default styled(EditorView)`
+${Content}{
+	margin-right:70px;
+}
 .fadebg1{
     padding-left:10px;
     opacity:0.23;
@@ -89,7 +109,7 @@ export default styled(EditorView)`
     position:absolute;
 }
 
-	max-width: 150ch;
+
 	h2,
 	h3 {
 		padding-left:5px;
@@ -152,12 +172,11 @@ export default styled(EditorView)`
 		flex-direction:row;
 		border-radius:8px;
 		border-radius:4px;
-		background: #a94cf2; /* Old browsers */
-		background: -moz-linear-gradient(45deg, #a94cf2 0%, #6f67fc 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(45deg, #a94cf2 0%,#6f67fc 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(45deg, #a94cf2 0%,#6f67fc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a94cf2', endColorstr='#6f67fc',GradientType=1 );}
-.difficulty{
+		background: linear-gradient(45deg, #a94cf2, #6f67fc);
+        background-size: 400% 400%;
+		animation: ${Gradient} 3s ease infinite;}
+		
+	.difficulty{
 		color:white;
 		padding-top:15px;
 		padding-right:10px;

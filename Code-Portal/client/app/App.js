@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import {
@@ -12,7 +12,8 @@ import {
 	Sidebar,
 	Footer,
 	Submission,
-	Questions
+	Questions,
+	Error
 } from 'components';
 
 const question = {
@@ -46,9 +47,9 @@ class App extends Component {
 				<BrowserRouter>
 					<div className={this.props.className}>
 					
-						<Navbar />
-						{/* <Sidebar /> */}
+						
 						<Switch>
+
 							<Route
 								path="/contests"
 								component={() => <ContestsPage />}
@@ -66,6 +67,11 @@ class App extends Component {
 								path="/questions"
 								component={() => <Questions />}
 							/>
+							<Route
+								component={() => <Error />}
+							/>
+
+							
 						</Switch>
 						
 						
@@ -77,10 +83,22 @@ class App extends Component {
 		);
 	}
 }
-
+var footerup = keyframes`
+0%{
+    transform: rotate(0) translateY(10px);
+    opacity: 0;
+    }
+100%{
+    transform: rotate(0) translateY(0);
+    opacity: 1;
+    }
+`;
 export default styled(App)`
 	hr{
 		margin-top:30px;
 		border: 0.5px solid #dfe5f4;
+	}
+	${Footer}{
+		animation: ${footerup} 1s 1 0s ease-in;
 	}
 `;

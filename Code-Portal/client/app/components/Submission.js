@@ -1,12 +1,32 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Content, Correct, Wrong, Button, Gauge} from 'components';
+import { Content, Button, Gauge, Navbar} from 'components';
 import { NavLink } from 'react-router-dom';
 
+const ans ={right:"fa fa-check-circle",wrong:"fa fa-times-circle"};
+
 class Submission extends Component {
+    componentDidMount(){
+        var x= 1;
+		var elem = document.getElementById("accuracy"); 
+        var id = setInterval(frame, 30);
+		function frame() {
+			if (x >= 73) {
+			clearInterval(id);
+			} else {
+                x=x+2; 
+            elem.innerText = x;
+            }
+            elem.innerText= x+"%"
+
+  };
+  
+}
+
     render() {
         return (
             <div className={this.props.className}>
+            <Navbar />
                 <Content>
                 <div >
                 <NavLink to="/contests"><span className="navigation">All Contests</span></NavLink>
@@ -21,46 +41,46 @@ class Submission extends Component {
                     <div className="container">
 
                         <div className="column">
-                            <span>01<Correct/></span>
-                            <span>02<Correct/></span>
-                            <span>03<Correct/></span>
-                            <span>04<Correct/></span>
-                            <span>05<Wrong/></span>
+                            <span>01<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>02<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>03<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>04<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>05<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
                         </div>
                         <div className="column">
-                            <span>06<Correct/></span>
-                            <span>07<Wrong/></span>
-                            <span>08<Correct/></span>
-                            <span>09<Wrong/></span>
-                            <span>10<Correct/></span>
+                            <span>06<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>07<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
+                            <span>08<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>09<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
+                            <span>10<i className={ans.right} aria-hidden="true" id="1"></i></span>
                         </div>
                         <div className="column">
-                            <span>11<Correct/></span>
-                            <span>12<Wrong/></span>
-                            <span>13<Correct/></span>
-                            <span>14<Wrong/></span>
-                            <span>15<Correct/></span>
+                            <span>11<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>12<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
+                            <span>13<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>14<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
+                            <span>15<i className={ans.right} aria-hidden="true" id="1"></i></span>
                         </div>
                         <div className="column">
-                            <span>16<Wrong/></span>
-                            <span>17<Correct/></span>
-                            <span>18<Correct/></span>
-                            <span>19<Correct/></span>
-                            <span>20<Correct/></span>
+                            <span>16<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
+                            <span>17<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>18<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>19<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>20<i className={ans.right} aria-hidden="true" id="1"></i></span>
                         </div>
                         <div className="column">
-                            <span>21<Correct/></span>
-                            <span>22<Correct/></span>
-                            <span>23<Correct/></span>
-                            <span>24<Correct/></span>
-                            <span>25<Correct/></span>
+                            <span>21<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>22<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>23<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>24<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>25<i className={ans.right} aria-hidden="true" id="1"></i></span>
                         </div>
                         <div className="column">
-                            <span>26<Correct/></span>
-                            <span>27<Wrong/></span>
-                            <span>28<Correct/></span>
-                            <span>29<Correct/></span>
-                            <span>30<Wrong/></span>
+                            <span>26<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>27<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
+                            <span>28<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>29<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>30<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
                         </div>
                     </div>
                     <hr/>
@@ -68,16 +88,16 @@ class Submission extends Component {
                     <div className="container1">
                     <div className="column">
                     <h3>Your Score</h3>
-                    <section>
-                        9.35/15.00
+                    <section id="score">
+                    9.35/15
                     </section>
                     <Gauge color="#ea2d78" size="3em" percentage={9.35 / 15.0} />
                     </div>
                     
                     <div className="column">
                     <h3>Your Accuracy</h3>
-                    <section>73%</section>
-                    <Gauge color="#0f0" size="3em" percentage={73.0 / 100.0} />
+                    <section id="accuracy"></section>
+                    <Gauge color="#0f0" size="3em" percentage={73/ 100.0} />
                     
 
                     </div>
@@ -142,12 +162,6 @@ h1 {
     flex-direction  : row;
     color:#c8c8d1;
 }
-${Correct} #correct{
-    margin-left:0.8em;
-    padding-top: 2px;
-    height:20px;
-    width:20px;
-}
 
 h3{
     color: #fff;
@@ -159,7 +173,7 @@ section{
     font-size:1.2em;
     color:#c8c8d1;
 }
-margin-bottom:100px;
+margin-bottom:50px;
 ${Button}{
     margin-top:40px;
 }
@@ -197,5 +211,20 @@ a{
 .test{
     margin-top:20px;
 }
+.fa{
+    color:#fff;
+    &.fa-check-circle{
+        color: #00e048;
+    }
 
+    &.fa-times-circle{
+        color:#ff0100;
+    }
+}
+i{
+    margin-left:10px;
+}
+.column>span{
+    margin: 2px 0 2px 0;
+}
 `;

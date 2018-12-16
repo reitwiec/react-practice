@@ -20,3 +20,4 @@ export { default as Correct } from './Correct';
 export { default as Wrong } from './Wrong';
 export { default as Questions } from './Questions';
 export { default as Gauge } from './Gauge';
+export { default as Error } from './Error';
