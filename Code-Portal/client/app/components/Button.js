@@ -23,6 +23,11 @@ export default styled(Button)`
 		transition: 0.5s;
 		margin-top: -0.5em;
 		float: left;
+		box-shadow: none;
+    outline: none;
+    -webkit-appearance:none ;
+    -moz-appearance:none ;
+    appearance:none ;
 	:hover{
 		color:#fff;
 		background-color: #6f63ff;

@@ -178,7 +178,7 @@ export default styled(Questions)`
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
         border:none;
         filter: drop-shadow(0 0 0.95rem #1f2032);
-        animation: ${check1} 3s ease 1;
+        animation: ${check1} 2s ease 1;
 }
         .details{
             font-weight:400;
@@ -241,7 +241,7 @@ export default styled(Questions)`
         width:60%;
         border:none;
         filter: drop-shadow(0 0 0.95rem #1f2032);
-        animation: ${check} 3s ease 1;
+        animation: ${check} 2s ease 1;
     }
     border:none;
 

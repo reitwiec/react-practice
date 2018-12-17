@@ -6,6 +6,15 @@ import { NavLink } from 'react-router-dom';
 const ans ={right:"fa fa-check-circle",wrong:"fa fa-times-circle"};
 
 class Submission extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            val_1:0,
+            val_2:0,
+        }
+    }
+
+
     componentDidMount(){
         var x= 1;
 		var elem = document.getElementById("accuracy"); 
@@ -18,9 +27,9 @@ class Submission extends Component {
             elem.innerText = x;
             }
             elem.innerText= x+"%"
-
-  };
-  
+        }
+    this.interval = setInterval(() => (this.state.val_1>=73)?clearInterval(this.interval):this.setState({ val_1: this.state.val_1+1 }), 10);
+    this.interval = setInterval(() => (this.state.val_2>=9.35)?clearInterval(this.interval):this.setState({ val_2: this.state.val_2+0.3 }), 10);
 }
 
     render() {
@@ -91,13 +100,13 @@ class Submission extends Component {
                     <section id="score">
                     9.35/15
                     </section>
-                    <Gauge color="#ea2d78" size="3em" percentage={9.35 / 15.0} />
+                    <Gauge color="#ea2d78" size="3em" percentage={this.state.val_2 / 15.0} />
                     </div>
                     
                     <div className="column">
                     <h3>Your Accuracy</h3>
                     <section id="accuracy"></section>
-                    <Gauge color="#0f0" size="3em" percentage={73/ 100.0} />
+                    <Gauge color="#0f0" size="3em" percentage={this.state.val_1/ 100.0} />
                     
 
                     </div>
@@ -222,6 +231,7 @@ a{
     }
 }
 i{
+    margin-top:3px;
     margin-left:10px;
 }
 .column>span{

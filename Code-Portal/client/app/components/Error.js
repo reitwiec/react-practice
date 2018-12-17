@@ -10,19 +10,19 @@ class Error extends Component {
                 <div className="container">
                 <div className="hello">
 
-</div>
-<div className="hello1">
+                </div>
+                <div className="hello1">
 
-</div>
-<div className="hello2">
+                </div>
+                <div className="hello2">
 
-</div>
-<div className="hello3">
+                </div>
+                <div className="hello3">
 
-</div>
-<div className="hello4">
+                </div>
+                <div className="hello4">
 
-</div> 
+            </div> 
 
                 </div>
                 <div className="subContainer">
@@ -139,6 +139,7 @@ var down5 = keyframes`
 `;
 
 export default styled(Error)`
+
         display:flex;
         flex-direction:row;
         justify-content:space-around;
@@ -237,7 +238,7 @@ ${Button}:hover{
     background:#fb0083;
     position:absolute;
 
-    animation:${down1} 0.1s 1 1.5s linear forwards;
+    animation:${down1} 0.2s 1 1.5s linear forwards;
     
 }
 .hello1{
@@ -248,7 +249,7 @@ ${Button}:hover{
     background:#4bdc7c;
     position:absolute;
     color:white;
-    animation:${down2} 0.1s 1 1.5s linear forwards;
+    animation:${down2} 0.2s 1 1.5s linear forwards;
 
 }
 .hello2{
@@ -259,7 +260,7 @@ ${Button}:hover{
     background:#b14aee;
     position:absolute;
     color:white;
-    animation:${down3} 0.1s 1 1.5s linear forwards;
+    animation:${down3} 0.2s 1 1.5s linear forwards;
 
 }
 .hello3{
@@ -270,7 +271,7 @@ ${Button}:hover{
     background:#f6c760;
     position:absolute;
     color:white;
-    animation:${down4} 0.1s 1 1.5s linear forwards;
+    animation:${down4} 0.2s 1 1.5s linear forwards;
 
 }
 .hello4{
@@ -281,7 +282,8 @@ ${Button}:hover{
     background:#6a93ff;
     position:absolute;
     color:white;
-    animation:${down5} 0.1s 1 1.5s linear forwards;
+    animation:${down5} 0.2s 1 1.5s linear forwards;
 
 }
+
 `;

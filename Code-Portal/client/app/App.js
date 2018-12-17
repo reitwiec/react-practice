@@ -13,7 +13,8 @@ import {
 	Footer,
 	Submission,
 	Questions,
-	Error
+	Error,
+	Login
 } from 'components';
 
 const question = {
@@ -68,8 +69,14 @@ class App extends Component {
 								component={() => <Questions />}
 							/>
 							<Route
+								path="/login"
+								component={() => <Login />}
+							/>
+							<Route
 								component={() => <Error />}
 							/>
+
+							
 
 							
 						</Switch>
