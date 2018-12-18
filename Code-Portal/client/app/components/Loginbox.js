@@ -9,10 +9,13 @@ class Loginbox extends Component {
         return (
             <div className={this.props.className}>
                 <div className="container">
+            
                 <h2>Log into <span>CodePortal</span> </h2>
-                <input type="search" placeholder="Email Address" className="email"/>
-                <input type="password" placeholder="Password" className="password"/>
+                <form action="">
+                <input type="text" placeholder="Email Address" className="email" required/>
+                <input type="password" placeholder="Password" className="password" required/>
                 <Button><span>Log In</span></Button>
+                </form>
                 <div className="beauty"><h1>User</h1></div>
                 </div>
 

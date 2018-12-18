@@ -73,6 +73,11 @@ class App extends Component {
 								component={() => <Login />}
 							/>
 							<Route
+								path="/"
+								component={() => <Login />}
+								exact
+							/>
+							<Route
 								component={() => <Error />}
 							/>
 

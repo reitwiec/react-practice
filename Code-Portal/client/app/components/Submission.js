@@ -221,19 +221,21 @@ a{
     margin-top:20px;
 }
 .fa{
+    
     color:#fff;
     &.fa-check-circle{
         color: #00e048;
+        margin-top:3px;
+    margin-left:10px;
     }
 
     &.fa-times-circle{
         color:#ff0100;
+        margin-top:3px;
+    margin-left:10px;
     }
 }
-i{
-    margin-top:3px;
-    margin-left:10px;
-}
+
 .column>span{
     margin: 2px 0 2px 0;
 }
