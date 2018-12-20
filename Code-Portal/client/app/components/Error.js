@@ -74,12 +74,10 @@ var incoming3 = keyframes`
 `;
 var borderchange = keyframes `
 0%{
-    border-radius:0;
     width:100px;
 }
 100%{
-    border-radius:40px;
-    width:150px;
+    width:120px;
 }
 `;
 // var check = keyframes`
@@ -216,20 +214,22 @@ ${Button}{
     font-weight:700;
     margin-top:2em;
     float:none;
-    width:150px;
+    width:120px;
     border-radius:40px;
     font-size:0.55em;
+    transition:0.4s;
     background: #fb0084; /* Old browsers */
     background: -moz-linear-gradient(45deg, #fb0084 9%, #fc54a1 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(45deg, #fb0084 9%,#fc54a1 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(45deg, #fb0084 9%,#fc54a1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb0084', endColorstr='#fc54a1',GradientType=1 );
     filter: drop-shadow(-3px 2px 5px #26263e);
-    animation: ${borderchange} 0.7s 1 0s ease-in;
+    animation: ${borderchange} 0.7s 1 0s ease-in-out;
 }
 ${Button}:hover{
-    filter: drop-shadow(0px 0px 10px #1c1c2e);
-}
+    width:150px;
+    cursor:pointer;
+} 
 .hello{
     z-index:1;
     left:0px;
