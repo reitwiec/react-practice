@@ -17,8 +17,9 @@ class EditorView extends Component {
 			width=width+0.2; 
 			elem.style.width = width + '%'; 
 			}
-  }
+  		}
 	}
+	
 	render(){
 		return(
 			<div className={this.props.className}>
@@ -229,7 +230,5 @@ ${Content}{
 	.navigation:hover{
 		color:#fff;
 	}
-	
-
 
 `;
