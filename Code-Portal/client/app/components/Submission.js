@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Content, Button, Gauge, Navbar} from 'components';
+import { Content, Button, Gauge, Navbar,Contesticon} from 'components';
 import { NavLink } from 'react-router-dom';
 
-const ans ={right:"fa fa-check-circle",wrong:"fa fa-times-circle"};
+const ans ={right:"fa fa-check-circle",wrong:"fa fa-times-circle",tle:"fas fa-clock",seg:"fas fa-exclamation-circle"};
 
 class Submission extends Component {
     constructor(props){
@@ -51,7 +51,7 @@ class Submission extends Component {
 
                         <div className="column">
                             <span>01<i className={ans.right} aria-hidden="true" id="1"></i></span>
-                            <span>02<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>02<i className={ans.tle} aria-hidden="true" id="3"></i></span>
                             <span>03<i className={ans.right} aria-hidden="true" id="1"></i></span>
                             <span>04<i className={ans.right} aria-hidden="true" id="1"></i></span>
                             <span>05<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
@@ -59,27 +59,27 @@ class Submission extends Component {
                         <div className="column">
                             <span>06<i className={ans.right} aria-hidden="true" id="1"></i></span>
                             <span>07<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
-                            <span>08<i className={ans.right} aria-hidden="true" id="1"></i></span>
-                            <span>09<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
+                            <span>08<i className={ans.tle} aria-hidden="true" id="1"></i></span>
+                            <span>09<i className={ans.tle} aria-hidden="true" id="2"></i></span>
                             <span>10<i className={ans.right} aria-hidden="true" id="1"></i></span>
                         </div>
                         <div className="column">
                             <span>11<i className={ans.right} aria-hidden="true" id="1"></i></span>
-                            <span>12<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
+                            <span>12<i className={ans.tle} aria-hidden="true" id="2"></i></span>
                             <span>13<i className={ans.right} aria-hidden="true" id="1"></i></span>
-                            <span>14<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
+                            <span>14<i className={ans.seg} aria-hidden="true" id="2"></i></span>
                             <span>15<i className={ans.right} aria-hidden="true" id="1"></i></span>
                         </div>
                         <div className="column">
                             <span>16<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
-                            <span>17<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>17<i className={ans.seg} aria-hidden="true" id="1"></i></span>
                             <span>18<i className={ans.right} aria-hidden="true" id="1"></i></span>
-                            <span>19<i className={ans.right} aria-hidden="true" id="1"></i></span>
-                            <span>20<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>19<i className={ans.tle} aria-hidden="true" id="1"></i></span>
+                            <span>20<i className={ans.tle} aria-hidden="true" id="1"></i></span>
                         </div>
                         <div className="column">
                             <span>21<i className={ans.right} aria-hidden="true" id="1"></i></span>
-                            <span>22<i className={ans.right} aria-hidden="true" id="1"></i></span>
+                            <span>22<i className={ans.tle} aria-hidden="true" id="1"></i></span>
                             <span>23<i className={ans.right} aria-hidden="true" id="1"></i></span>
                             <span>24<i className={ans.right} aria-hidden="true" id="1"></i></span>
                             <span>25<i className={ans.right} aria-hidden="true" id="1"></i></span>
@@ -87,9 +87,9 @@ class Submission extends Component {
                         <div className="column">
                             <span>26<i className={ans.right} aria-hidden="true" id="1"></i></span>
                             <span>27<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
-                            <span>28<i className={ans.right} aria-hidden="true" id="1"></i></span>
-                            <span>29<i className={ans.right} aria-hidden="true" id="1"></i></span>
-                            <span>30<i className={ans.wrong} aria-hidden="true" id="2"></i></span>
+                            <span>28<i className={ans.seg} aria-hidden="true" id="1"></i></span>
+                            <span>29<i className={ans.seg} aria-hidden="true" id="1"></i></span>
+                            <span>30<i className={ans.seg} aria-hidden="true" id="2"></i></span>
                         </div>
                     </div>
                     <hr/>
@@ -129,6 +129,13 @@ class Submission extends Component {
 }
 
 export default styled(Submission)`
+${Contesticon}{
+    g {
+        fill: #fff;
+    }
+}
+
+
 hr{
 
     opacity:0.3;
@@ -223,7 +230,6 @@ a{
 }
 .fa{
     
-    color:#fff;
     &.fa-check-circle{
         color: #00e048;
         margin-top:3px;
@@ -234,6 +240,19 @@ a{
         color:#ff0100;
         margin-top:3px;
     margin-left:10px;
+    }
+
+}
+.fas {
+    &.fa-clock{
+        color:#fff;
+        margin-top:3px;
+        margin-left:10px;
+    }
+    &.fa-exclamation-circle{
+        color:#fff;
+        margin-top:3px;
+        margin-left:10px;
     }
 }
 

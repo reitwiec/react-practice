@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { Navbar, ContestView, Content } from 'components';
+import { Navbar, ContestView, Content,Contesticon } from 'components';
 
 class ContestsPage extends Component {
 	render() {
@@ -18,5 +18,10 @@ class ContestsPage extends Component {
 }
 
 export default styled(ContestsPage)`
+	${Contesticon}{
+		g {
+			fill: #fff;
+		}
+	}
 	text-align: center;
 `;

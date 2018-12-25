@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { ContestCard, Sidebar } from 'components';
+
 
 const contests = [
 	{
@@ -23,17 +24,43 @@ class ContestView extends Component {
 	render() {
 		return (
 			<div className={this.props.className}>
-				<h1>Contests</h1>
+			<h1>Contests</h1>
 				<span>Overview</span>
+
+
 				<div>
 					{new Array(contests.length).fill(0).map((_, i) => (
-						<ContestCard  contest={contests[i % contests.length]} key={i} joined={i%2}/>
+						<ContestCard  contest={contests[i % contests.length]} key={i} joined={i%3}/>
 					))}
 				</div>
+				
 			</div>
 		);
 	}
 }
+
+const test = keyframes`
+0%{ 
+	transform: translateX(-30px);
+    opacity:0;
+    }
+100%{
+	transform: translateX(0px);
+    opacity:1;
+    }
+`;
+const test1 = keyframes`
+0%{ 
+	transform: translateX(-20px);
+    opacity:0;
+    }
+100%{
+	transform: translateX(0px);
+    opacity:1;
+    }
+`;
+
+
 
 export default styled(ContestView)`
 	display: flex;
@@ -42,14 +69,19 @@ export default styled(ContestView)`
 	justify-content: flex-end;
 
 	> h1 {
-		color: #374262;
+		animation: ${test} 0.8s 1 0s ease-in;
+
+		font-weight:600;
+    	color:#fff;
 		text-align: left;
-		font-weight: 700;
+
 	}
 
 	> span {
+		animation: ${test1} 0.8s 1 0s ease-in;
 		padding-left: 2px;
-		color: #374262;
+		color: #dfdfe7;
+		letter-spacing:2px;
 		text-align: left;
 		font-size: 0.8em;
 		font-weight: 400;

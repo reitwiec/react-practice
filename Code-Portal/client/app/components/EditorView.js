@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled,{keyframes} from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-import { Button, Content, Editor, Navbar } from 'components';
+import { Button, Content, Editor, Navbar,Contesticon } from 'components';
 
 const hello = () => console.log('You just submitted');
 class EditorView extends Component {
@@ -95,6 +95,13 @@ var Gradient = keyframes`
 
 
 export default styled(EditorView)`
+
+${Contesticon}{
+	g {
+		fill: #fff;
+	}
+}
+
 ${Content}{
 	margin-right:70px;
 }

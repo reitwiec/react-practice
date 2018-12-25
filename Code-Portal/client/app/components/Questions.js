@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled ,{keyframes} from 'styled-components';
-import { Navbar,Button, Content } from 'components';
+import { Navbar,Button, Content,Contesticon } from 'components';
 import {NavLink} from 'react-router-dom';
 
 class Questions extends Component {
@@ -184,6 +184,12 @@ var Gradient = keyframes`
 
 
 export default styled(Questions)`
+${Contesticon}{
+    g {
+        fill: #fff;
+    }
+}
+
 height:100%;
 
 .fadebg1{
@@ -253,13 +259,13 @@ height:100%;
         // background:#2f2e4d;
         margin: 20px 0 20px 0;
         transition:0.2s;
-        section{
+    }
+    .questions>section{
+            transition:0.2s;
             color:#51608d;
             letter-spacing:-0.5px;
-        }
     }
     .questions:hover{
-        font-size:1.5em;
         width:93%;
         z-index:1;
         background:#fd6b9a;
@@ -267,10 +273,15 @@ height:100%;
         filter: drop-shadow(0px 5px 5px #181e30);
         color:#fff;
         section{
+            font-size:1.5em;
             color:#fff;
         }
-
     }
+    .questions>section:hover{
+        font-size:1.5em;
+        color:#fff;
+    }
+
     .container{
         
         border-radius: 6px;
@@ -375,7 +386,7 @@ height:100%;
         filter: drop-shadow(0px 0px 8px #1b1b2c);
         cursor:pointer;
         border-radius:46px;
-        border: 1px solid white;
+        // border: 1px solid white;
         .tooltiptext1 {
             visibility: visible;
           }

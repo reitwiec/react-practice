@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled, {keyframes} from 'styled-components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
 import {
 	Content,
 	ContestsPage,
