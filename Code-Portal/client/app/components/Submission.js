@@ -130,7 +130,8 @@ class Submission extends Component {
 
 export default styled(Submission)`
 hr{
-    opacity:0.5;
+
+    opacity:0.3;
     width:60%;
 }
 h1 {

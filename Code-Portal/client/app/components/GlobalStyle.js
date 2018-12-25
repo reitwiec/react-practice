@@ -10,21 +10,23 @@ const GlobalStyle = createGlobalStyle`
 		padding: 0;
 	}
 	html{
-		background-color:#222437;
+		background-color:#1a2037;
+
+		
 	}
 
 	body {
-		background-color:#000;
-		background: #2b2b46; /* Old browsers */
-		background: -moz-radial-gradient(center, ellipse cover, #2b2b46 9%, #232438 53%, #222437 100%); /* FF3.6-15 */
-		background: -webkit-radial-gradient(center, ellipse cover, #2b2b46 9%,#232438 53%,#222437 100%); /* Chrome10-25,Safari5.1-6 */
-		background: radial-gradient(ellipse at center, #2b2b46 9%,#232438 53%,#222437 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2b46', endColorstr='#222437',GradientType=1 );
 
+		background: #181c34; /* Old browsers */
+		background: -moz-radial-gradient(center, ellipse cover, #1f2741 9%, #181c34 100%); /* FF3.6-15 */
+		background: -webkit-radial-gradient(center, ellipse cover, #1f2741 9%,#181c34 100%); /* Chrome10-25,Safari5.1-6 */
+		background: radial-gradient(ellipse at center, #1f2741 9%,#181c34 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f2741', endColorstr='#181c34',GradientType=1 );
+		min-height:100vh;
 
 		position: relative;
-		margin: 0;
 		padding: 0;
+
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 			'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 			sans-serif;

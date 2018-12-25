@@ -21,7 +21,6 @@ class Error extends Component {
 
                 </div>
                 <div className="hello4">
-
             </div> 
 
                 </div>
@@ -142,19 +141,14 @@ export default styled(Error)`
         flex-direction:row;
         justify-content:space-around;
 .container{
-        background:red;
         margin:40px;
         position relative;
         height:570px;
         width: 80%;
         border-radius: 17px;
-        background: #2f2f4b; /* Old browsers */
-        background: -moz-radial-gradient(center, ellipse cover, #2f2f4b 9%, #26263e 100%); /* FF3.6-15 */
-        background: -webkit-radial-gradient(center, ellipse cover, #2f2f4b 9%,#26263e 100%); /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(ellipse at center, #2f2f4b 9%,#26263e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
+        background: #202942;
         border:none;
-        filter: drop-shadow(0 13px 1.1rem #191928);
+        filter: drop-shadow(0px 15px 15px #181e30);
         animation: ${incoming1} 1s 1 0s ease-in;
 
     }
@@ -167,14 +161,13 @@ export default styled(Error)`
 .error{ 
         z-index:-1;
         font-size:30em;
-        color:#2f2f4b;
+        color:#202942;
         font-weight:700;
-        // background:red;
         position: absolute;
         top: 50%;  /* position the top  edge of the element at the middle of the parent */
         left: 50%; /* position the left edge of the element at the middle of the parent */
         transform: translate(-50%, -50%);
-        filter: drop-shadow(-11px 25px 10px #26263e);
+        filter: drop-shadow(0px 10px 10px #181e30);
         -webkit-touch-callout: none;
 		-webkit-user-select: none;
 		-khtml-user-select: none;
@@ -205,7 +198,7 @@ export default styled(Error)`
     font-weight:200;
 }
 .errorMessage>p{
-    color:#52525c;
+    color:#445076;
     font-weight:600;
     font-size:0.7em;
     margin-top:0.5em;

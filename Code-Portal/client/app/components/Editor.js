@@ -114,5 +114,7 @@ export default styled(Editor)`
 	.CodeMirror{
 		font-family: 'Inconsolata', monospace;
 		font-size:0.8em;
+		
 	}
+
 `;

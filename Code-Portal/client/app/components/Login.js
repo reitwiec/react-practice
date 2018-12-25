@@ -12,10 +12,14 @@ class Login extends Component {
                 <span id="logo">
 						<img src={iecselogo} alt="" id="logoimg" />
 					</span>
+                    {/* <div>
+                        <span><i class="fa fa-google-plus" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-github-alt" aria-hidden="true"></i></span>
+                    </div> */}
                     <div className="alternative">
                         <span>Create an Account</span>
                         <span>Recover Account</span>
-                        <span id="google">Log in with Google</span>
                     </div>
                     <Loginbox/>
                                     
@@ -48,7 +52,8 @@ const slide1 = keyframes`
 
 
 export default styled(Login)`
-    height:650px;
+
+    height:660px;
     #logo {
 		position: absolute;
 		top: -4px;
@@ -75,7 +80,7 @@ export default styled(Login)`
     .alternative>span{
         margin:20px;
         font-size:0.9em;
-        color:#9e9ebb;
+        color:#6b94ff;
         transition:0.3s;
         -webkit-touch-callout: none;
 		-webkit-user-select: none;

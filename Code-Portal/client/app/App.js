@@ -14,7 +14,8 @@ import {
 	Submission,
 	Questions,
 	Error,
-	Login
+	Login,
+	Leaderboard
 } from 'components';
 
 const question = {
@@ -75,6 +76,11 @@ class App extends Component {
 							<Route
 								path="/"
 								component={() => <Login />}
+								exact
+							/>
+							<Route
+								path="/leaderboard"
+								component={() => <Leaderboard />}
 								exact
 							/>
 							<Route

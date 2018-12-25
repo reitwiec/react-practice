@@ -25,68 +25,96 @@ class Questions extends Component {
                     <span className="fadebg1">Head</span>
                     </div>
                     <div className="content">
+                    <NavLink to="./editor">
                     <div className="questions">
                         <section>Bon Appétit</section>
                         <span className="details">Max Score: 15</span>
                         <span className="strength">Difficulty: Easy</span>
-                        <NavLink to="./editor"><Button>
-                            Solve
-                        </Button></NavLink>
                         
-                    </div>
+                        
+                    </div></NavLink>
+                    <NavLink to="./editor">
                     <div className="questions">
                     <section>Save the Queen!</section>
                     <span className="details">Max Score: 15</span>
                     <span className="strength">Difficulty: Easy</span>
-                    <NavLink to="./editor"><Button>
-                            Solve
-                        </Button></NavLink>
+                    
                     
                     </div>
+                    </NavLink>
+                    
+                    <NavLink to="./editor">
                     <div className="questions">
-                    <section>Hanging Posters</section>
-                    <span className="details">Max Score: 30</span>
-                    <span className="strength">Difficulty: Medium</span>
-                    <NavLink to="./editor"><Button>
-                            Solve
-                        </Button></NavLink>
-
+                    <section>Save the Queen!</section>
+                    <span className="details">Max Score: 15</span>
+                    <span className="strength">Difficulty: Easy</span>
+                    
+                    
                     </div>
+                    </NavLink>
+                    <NavLink to="./editor">
                     <div className="questions">
-                    <section>Basketball tournament</section>
-                    <span className="details">Max Score: 40</span>
-                    <span className="strength">Difficulty: Advanced</span>
-                    <NavLink to="./editor"><Button>
-                            Solve
-                    </Button></NavLink>
-
-                    </div>
-
-<div className="questions">
                     <section>Save the Queen!</section>
                     <span className="details">Max Score: 15</span>
                     <span className="strength">Difficulty: Easy</span>
-                    <NavLink to="./editor"><Button>
-                            Solve
-                        </Button></NavLink>
                     
-                    </div><div className="questions">
-                    <section>Save the Queen!</section>
-                    <span className="details">Max Score: 15</span>
-                    <span className="strength">Difficulty: Easy</span>
-                    <NavLink to="./editor"><Button>
-                            Solve
-                        </Button></NavLink>
-                    
-                    </div><div className="questions">
-                    <section>Save the Queen!</section>
-                    <span className="details">Max Score: 15</span>
-                    <span className="strength">Difficulty: Easy</span>
-                    <NavLink to="./editor"><Button>
-                            Solve
-                        </Button></NavLink>
                     
                     </div>
+                    </NavLink>
+                    <NavLink to="./editor">
+                    <div className="questions">
+                    <section>Save the Queen!</section>
+                    <span className="details">Max Score: 15</span>
+                    <span className="strength">Difficulty: Easy</span>
+                    
+                    
+                    </div>
+                    </NavLink>
+                    <NavLink to="./editor">
+                    <div className="questions">
+                    <section>Save the Queen!</section>
+                    <span className="details">Max Score: 15</span>
+                    <span className="strength">Difficulty: Easy</span>
+                    
+                    
+                    </div>
+                    </NavLink>
+                    <NavLink to="./editor">
+                    <div className="questions">
+                    <section>Save the Queen!</section>
+                    <span className="details">Max Score: 15</span>
+                    <span className="strength">Difficulty: Easy</span>
+                    
+                    
+                    </div>
+                    </NavLink>
+                    <NavLink to="./editor">
+                    <div className="questions">
+                    <section>Save the Queen!</section>
+                    <span className="details">Max Score: 15</span>
+                    <span className="strength">Difficulty: Easy</span>
+                    
+                    
+                    </div>
+                    </NavLink>
+                    <NavLink to="./editor">
+                    <div className="questions">
+                    <section>Save the Queen!</section>
+                    <span className="details">Max Score: 15</span>
+                    <span className="strength">Difficulty: Easy</span>
+                    
+                    
+                    </div>
+                    </NavLink>
+                    <NavLink to="./editor">
+                    <div className="questions">
+                    <section>Save the Queen!</section>
+                    <span className="details">Max Score: 15</span>
+                    <span className="strength">Difficulty: Easy</span>
+                    
+                    
+                    </div>
+                    </NavLink>
 
 
 
@@ -156,9 +184,11 @@ var Gradient = keyframes`
 
 
 export default styled(Questions)`
+height:100%;
+
 .fadebg1{
     padding-left:10px;
-    opacity:0.23;
+    opacity:0.26;
     color:white;
     font-weight:900;
     z-index:-1;
@@ -171,15 +201,12 @@ export default styled(Questions)`
     width:300px;
     height: 300px;
     border-radius: 6px;
-        background: #2f2f4b; /* Old browsers */
-        background: -moz-radial-gradient(center, ellipse cover, #2f2f4b 9%, #26263e 100%); /* FF3.6-15 */
-        background: -webkit-radial-gradient(center, ellipse cover, #2f2f4b 9%,#26263e 100%); /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(ellipse at center, #2f2f4b 9%,#26263e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
+    background: #202942;
+        filter: drop-shadow(0px 15px 15px #181e30);
         border:none;
-        filter: drop-shadow(0 0 0.95rem #1f2032);
         animation: ${check1} 2s ease 1;
 }
+
         .details{
             font-weight:400;
             font-size:0.7em;
@@ -205,59 +232,74 @@ export default styled(Questions)`
 
         background:#f77f6e;
     }
-
-    .content{
-        filter: drop-shadow(0px 5px 5px #282840);
-        
-    }
     .strength{
         margin-left:60px;
         font-weight:400;
         font-size:0.7em;
     }
     .questions{
+        width:90%;
+        left: 50%;
+        transform: translateX(-50%);
+        background:#272f49;
         position:relative;
-        color:#dfdfe7;
+        color:#445076;
         font-size:1.3em;
         font-weight:700;
         line-height:1;
         padding:10px;
-        margin:20px 0 20px 0;
-        background:#2f2e4d;
+        padding: 10px;
+        border-radius:10px;
+        // background:#2f2e4d;
+        margin: 20px 0 20px 0;
         transition:0.2s;
+        section{
+            color:#51608d;
+            letter-spacing:-0.5px;
+        }
     }
     .questions:hover{
+        font-size:1.5em;
+        width:93%;
+        z-index:1;
+        background:#fd6b9a;
+        // background: linear-gradient(45deg, #fd6b9a, #f77f6e);
+        filter: drop-shadow(0px 5px 5px #181e30);
         color:#fff;
-        background:#363559;
+        section{
+            color:#fff;
+        }
+
     }
     .container{
         
         border-radius: 6px;
-        background: #2f2f4b; /* Old browsers */
-        background: -moz-radial-gradient(center, ellipse cover, #2f2f4b 9%, #26263e 100%); /* FF3.6-15 */
-        background: -webkit-radial-gradient(center, ellipse cover, #2f2f4b 9%,#26263e 100%); /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(ellipse at center, #2f2f4b 9%,#26263e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
         width:60%;
         border:none;
-        filter: drop-shadow(0 0 0.95rem #1f2032);
+        background: #202942;
+        filter: drop-shadow(0px 15px 15px #181e30);
         animation: ${check} 2s ease 1;
+        padding-bottom:20px;
     }
     border:none;
 
     .heading{
         overflow:hidden;
         z-index: 1;
-        position: sticky;
 	    top: 0;
-        filter: drop-shadow(0px 5px 5px #282840);
+        filter: drop-shadow(0px 5px 5px #181e30);
         border-radius: 6px 6px 0 0;
-        height:55px;
-
+        height:60px;
+        margin-bottom:20px;
+        background:#272f49;
         background: linear-gradient(45deg, #fd6b9a, #f77f6e);
         background-size: 400% 400%;
         animation: ${Gradient} 3s ease infinite;
     }
+    
+    
+
+
     .heading1{
         text-align:center;
         overflow:hidden;
@@ -268,8 +310,14 @@ export default styled(Questions)`
         background-size: 400% 400%;
         animation: ${Gradient} 3s ease infinite;
     }
-    h1{
+    .heading>h1{
+        font-size:2.8em;
         line-height:55px;
+        padding-left:10px;
+        color:#fff;
+    }
+    .beauty>h1{
+
         padding-left:10px;
         color:#fff;
     }
@@ -278,6 +326,7 @@ export default styled(Questions)`
         line-height:55px;
         padding-left:10px;
         color:#fff;
+        letter-spacing:2px;
     }
     #rank>strong{
         color: #fff;
@@ -384,5 +433,9 @@ export default styled(Questions)`
     }
     .navigation:hover{
         color:#fff;
+    }
+
+    .details,.strength{
+        letter-spacing:1px;
     }
 `;

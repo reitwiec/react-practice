@@ -41,29 +41,30 @@ export default styled(Searchbar)`
 		appearance: none;
 		text-indent: 10px;
 		width: 250px;
-		border: 1px solid #1e202f;
+		border: none;
+		filter: drop-shadow(0px 3px 8px #181e30);
 		border-radius: 25px;
 		height: 25px;
-		background:#232437;
+		background:#272f49;
 		color:#fff;
 
 		::-webkit-input-placeholder {
-			color: #62638a;
+			color: #565f79;
 			opacity: 1;
 			font-size: 0.9em;
 		}
 	}
 
 	button {
-		background-color: #232437;
+		background-color: #272f49;
 		width: 70px;
-		height: 28px;
+		height: 26px;
 		border-radius: 25px;
 		position: absolute;
 		border: 1px solid #6a93ff;
 		top: 0px;
 		left: 260px;
-		transition: 0.8s;
+		transition: 0.5s;
 
 		:hover {
 			background-color: #6a93ff;
@@ -77,7 +78,7 @@ export default styled(Searchbar)`
 
 		.fa {
 			color: #6a93ff;
-			transition: 0.8s;
+			transition: 0.5s;
 		}
 
 		i > span {

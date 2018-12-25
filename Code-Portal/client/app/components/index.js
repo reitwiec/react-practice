@@ -23,3 +23,5 @@ export { default as Gauge } from './Gauge';
 export { default as Error } from './Error';
 export { default as Login } from './Login';
 export { default as Loginbox } from './Loginbox';
+export { default as Leaderboard } from './Leaderboard';
+export { default as PlayerCard} from './PlayerCard';

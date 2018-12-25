@@ -18,6 +18,20 @@ class Navbar extends Component {
 	render() {
 		return (
 			<div className={this.props.className}>
+				<div className="hello">
+
+				</div>
+				<div className="hello1">
+
+				</div>
+				<div className="hello2">
+
+				</div>
+				<div className="hello3">
+
+				</div>
+				<div className="hello4">
+				</div> 
 				<NavLink to="/">
 					<span id="logo">
 						<img src={iecselogo} alt="" id="logoimg" />
@@ -53,13 +67,10 @@ export default styled(Navbar)`
 	z-index: 1;
 	position: sticky;
 	top: 0;
-	background: #2f2f4b; /* Old browsers */
-// background: -moz-radial-gradient(center, ellipse cover, #2f2f4b 9%, #282840 100%); /* FF3.6-15 */
-// background: -webkit-radial-gradient(center, ellipse cover, #2f2f4b 9%,#282840 100%); /* Chrome10-25,Safari5.1-6 */
-// background: radial-gradient(ellipse at center, #2f2f4b 9%,#282840 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#282840',GradientType=1 );
+	background: #202942;
 	width: 100%;
 	height: 50px;
+	filter: drop-shadow(0px 5px 5px #181e30);
 
 	#logo {
 		position: absolute;
@@ -138,6 +149,68 @@ export default styled(Navbar)`
 
 	#avatar:hover ~ #unamenav {
 		right: 62px;
+	}
+
+
+	.hello{
+		bottom:0px;
+		z-index:1;
+		left:0px;
+		width:20%;
+		height:3px;
+		background:#fb0083;
+		position:absolute;
+	
+	
+		
+	}
+	.hello1{
+		bottom:0px;
+		z-index:1;
+		left:20%;
+		width:20%;
+		height:3px;
+		background:#4bdc7c;
+		position:absolute;
+		color:white;
+	
+	
+	}
+	.hello2{
+		bottom:0px;
+		z-index:1;
+		left:40%;
+		width:20%;
+		height:3px;
+		background:#b14aee;
+		position:absolute;
+		color:white;
+	
+	
+	}
+	.hello3{
+		bottom:0px;
+		z-index:1;
+		left:60%;
+		width:20%;
+		height:3px;
+		background:#f6c760;
+		position:absolute;
+		color:white;
+	
+	
+	}
+	.hello4{
+		bottom:0px;
+		z-index:1;
+		left:80%;
+		width:20%;
+		height:3px;
+		background:#6a93ff;
+		position:absolute;
+		color:white;
+	
+	
 	}
 	
 `;

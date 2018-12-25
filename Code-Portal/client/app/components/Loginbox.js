@@ -8,13 +8,27 @@ class Loginbox extends Component {
     render() {
         return (
             <div className={this.props.className}>
+
                 <div className="container">
-            
-                <h2>Log into <span>CodePortal</span> </h2>
+                <div className="hello">
+
+                </div>
+                <div className="hello1">
+
+                </div>
+                <div className="hello2">
+
+                </div>
+                <div className="hello3">
+
+                </div>
+                <div className="hello4">
+            </div> 
+                <h2>   <div className="login2">CodePortal</div>  <div className="login1">Sign into your account.</div></h2>
                 <form action="">
                 <input type="text" placeholder="Email Address" className="email" required/>
                 <input type="password" placeholder="Password" className="password" required/>
-                <Button><span>Log In</span></Button>
+                <Button><span>Sign In</span></Button>
                 </form>
                 <div className="beauty"><h1>User</h1></div>
                 </div>
@@ -43,6 +57,7 @@ const test1 = keyframes`
 `;
 
 export default styled(Loginbox)`
+
 overflow: hidden;
 .container{
 
@@ -54,37 +69,38 @@ overflow: hidden;
     transform: translate(-50%, -50%);
     width:400px;
     height:300px;
-    border-radius: 10px;
-    
+    border-radius: 5px;
+    filter: drop-shadow(0px 15px 15px #181e30);
     text-align:center;
-    background: #27273f; /* Old browsers */
-        background: -moz-radial-gradient(center, ellipse cover, #27273f 9%, #1f1f33 100%); /* FF3.6-15 */
-        background: -webkit-radial-gradient(center, ellipse cover, #27273f 9%,#1f1f33 100%); /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(ellipse at center, #27273f 9%,#1f1f33 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27273f', endColorstr='#1f1f33',GradientType=1 );
-        filter: drop-shadow(0 0 0.95rem #1f2032);
+    
+    background: #202942; /* Old browsers */
+
 
 
 
         
 }
-h2{
-    margin-top:20px;
-    font-weight:100;
+.login1{
+    font-size:0.4em;
+    font-weight:400;
     letter-spacing:3px;
-        color:#dfdfe7;
+    color:#dfdfe7;
 
 }
-h2>span{
-    font-weight:400;
-    letter-spacing:normal;
+.login2{
+    font-size:1.2em;
+    margin-top:10px;
+    font-weight:600;
+    color:#dfdfe7;
 }
+
 .email,.password{
     display:block;
     animation: ${test1} 1.2s 1 0.2s ease-out forwards;
-
+    font-weight:500;
     color:#fff;
     border: 0px;
+    border-radius: 4px;
     box-shadow: none;
     outline: none;
     -webkit-appearance:none ;
@@ -95,8 +111,8 @@ h2>span{
     margin-left:38px;
     border:none;
     text-indent: 10px;
-    background: rgba(255,255,255,0);
-    border-bottom: 1px solid rgba(223,223,231,0.5);
+    background: #272f49;
+
     
 }
 .password{
@@ -104,8 +120,9 @@ h2>span{
 }
 
 input::-webkit-input-placeholder{
-    color: rgba(223,223,231,0.6);
+    color: #565f79;
 }
+
 button{
     color:#fff;
     font-weight:400;
@@ -117,8 +134,9 @@ button{
     padding:10px;
     padding-top:7px;
     border:none;
-    border-radius:5px;
-    transition:0.4s;;
+    border-radius:20px;
+    transition:0.4s;
+    filter: drop-shadow(0px 5px 3px #1d243a);
     :hover{
         width:80%;
         background:#a94cf2;
@@ -126,25 +144,80 @@ button{
     }
 }
 button>span{
-    font-size:1.2em;
+    font-size:1em;
+    font-weight:600;
 }
 .beauty{
-    -webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
-    z-index:-1;
-    color:white;
-    bottom:-70px;
-    left:-20px;
-    font-size:80px;
-    position:absolute;
-    opacity:0.015;
+        z-index:-1;
+        color:white;
+        bottom:-70px;
+        left:-20px;
+        font-size:80px;
+        position:absolute;
+        opacity:0.015;
 }
 
+.hello{
+    z-index:1;
+    left:0px;
+    width:20%;
+    height:3px;
+    background:#fb0083;
+    position:absolute;
 
+
+    
+}
+.hello1{
+    z-index:1;
+    left:20%;
+    width:20%;
+    height:3px;
+    background:#4bdc7c;
+    position:absolute;
+    color:white;
+
+
+}
+.hello2{
+    z-index:1;
+    left:40%;
+    width:20%;
+    height:3px;
+    background:#b14aee;
+    position:absolute;
+    color:white;
+
+
+}
+.hello3{
+    z-index:1;
+    left:60%;
+    width:20%;
+    height:3px;
+    background:#f6c760;
+    position:absolute;
+    color:white;
+
+
+}
+.hello4{
+    z-index:1;
+    left:80%;
+    width:20%;
+    height:3px;
+    background:#6a93ff;
+    position:absolute;
+    color:white;
+
+
+}
 
 
 
