@@ -28,6 +28,7 @@ class Loginbox extends Component {
                 <form action="">
                 <input type="text" placeholder="Email Address" className="email" required/>
                 <input type="password" placeholder="Password" className="password" required/>
+                    {/* <div><input type="checkbox" value="remember-me" id="remember_me"/> Remember me</div> */}
                 <Button><span>Sign In</span></Button>
                 </form>
                 <div className="beauty"><h1>User</h1></div>

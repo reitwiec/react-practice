@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled, {keyframes} from 'styled-components';
-import {Button, Content,Navbar,PlayerCard} from 'components';
+import {Button, Content,Navbar,PlayerCard,Contesticon} from 'components';
 import {NavLink} from 'react-router-dom';
 import { avatar } from 'assets';
 
@@ -164,6 +164,11 @@ var Gradient = keyframes`
 `;
 
 export default styled(Leaderboard)`
+${Contesticon}{
+    g {
+        fill: #fff;
+    }
+}
 
     .stats{
         width:400px;
