@@ -25,3 +25,5 @@ export { default as Login } from './Login';
 export { default as Loginbox } from './Loginbox';
 export { default as Leaderboard } from './Leaderboard';
 export { default as PlayerCard} from './PlayerCard';
+export { default as Register} from './Register';
+export { default as Registerbox} from './Registerbox';
