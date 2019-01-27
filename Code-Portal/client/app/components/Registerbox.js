@@ -160,7 +160,7 @@ overflow: hidden;
 }
 #portal{
     color: #6f7eb2;
-    font-weight:400;
+    font-weight:300;
 }
 
 

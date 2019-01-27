@@ -43,7 +43,7 @@ export default styled(ContestCard)`
 	animation: ${test} 0.8s 1 0s ease-out;
 	margin: 0 1.5em 1.5em 0;
 	border-radius: 10px;
-	background-color: ${({joined }) => (colors[joined])};
+	background-color: ${({joined }) => (colors1[joined])};
 	height: 200px;
 	width: 60%;
 	text-align: left;
@@ -52,7 +52,7 @@ export default styled(ContestCard)`
 
 	:hover{
 		border-radius: 20px;
-		background-color: ${({joined }) => (colors1[joined])};
+		background-color: ${({joined }) => (colors[joined])};
 		cursor:pointer;
 		width: 70%;
 	}
