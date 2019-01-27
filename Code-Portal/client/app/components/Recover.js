@@ -1,30 +1,25 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { iecselogo } from 'assets';
-import { Loginbox } from 'components';
+import { ForgetPassword } from 'components';
 import { NavLink } from 'react-router-dom';
 
-class Login extends Component {
+class Recover extends Component {
 	render() {
 		return (
 			<div className={this.props.className}>
 				<span id="logo">
 					<img src={iecselogo} alt="" id="logoimg" />
 				</span>
-				{/* <div>
-                        <span><i class="fa fa-google-plus" aria-hidden="true"></i></span>
-                        <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
-                        <span><i class="fa fa-github-alt" aria-hidden="true"></i></span>
-                    </div> */}
 				<div className="alternative">
 					<NavLink to="/register">
 						<span>Create an Account</span>
 					</NavLink>
-					<NavLink to="/recover">
-						<span>Recover Account</span>
+					<NavLink to="/login">
+						<span>Sign in</span>
 					</NavLink>
 				</div>
-				<Loginbox />
+				<ForgetPassword />
 			</div>
 		);
 	}
@@ -49,7 +44,7 @@ const slide1 = keyframes`
     }
 `;
 
-export default styled(Login)`
+export default styled(Recover)`
     a{
         text-decoration: none;
     }
