@@ -15,7 +15,8 @@ import {
 	Error,
 	Login,
 	Leaderboard,
-	Register
+	Register,
+	Profile
 } from 'components';
 
 const question = {
@@ -86,6 +87,11 @@ class App extends Component {
 							<Route
 								path="/register"
 								component={() => <Register />}
+								exact
+							/>
+							<Route
+								path="/profile"
+								component={() => <Profile />}
 								exact
 							/>
 							<Route

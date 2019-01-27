@@ -4,6 +4,7 @@ import { iecselogo } from 'assets';
 import {
 	Loginbox
 } from 'components';
+import {NavLink} from 'react-router-dom';
 
 class Login extends Component {
     render() {
@@ -18,7 +19,7 @@ class Login extends Component {
                         <span><i class="fa fa-github-alt" aria-hidden="true"></i></span>
                     </div> */}
                     <div className="alternative">
-                        <span>Create an Account</span>
+                    <NavLink to="/register"><span>Create an Account</span></NavLink>
                         <span>Recover Account</span>
                     </div>
                     <Loginbox/>
@@ -51,8 +52,11 @@ const slide1 = keyframes`
 
 
 
-export default styled(Login)`
 
+export default styled(Login)`
+    a{
+        text-decoration: none;
+    }
     height:660px;
     #logo {
 		position: absolute;
@@ -77,7 +81,7 @@ export default styled(Login)`
         left: 50%; /* position the left edge of the element at the middle of the parent */
         transform: translate(-50%, -50%);
     }
-    .alternative>span{
+    .alternative>*{
         margin:20px;
         font-size:0.9em;
         color:#6b94ff;

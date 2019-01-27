@@ -27,3 +27,5 @@ export { default as Leaderboard } from './Leaderboard';
 export { default as PlayerCard} from './PlayerCard';
 export { default as Register} from './Register';
 export { default as Registerbox} from './Registerbox';
+export { default as Profile } from './Profile';
+export { default as Usercard } from './Usercard';
