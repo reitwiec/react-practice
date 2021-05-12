@@ -22,7 +22,7 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"codemirror": "^5.42.0",
+		"codemirror": "^5.58.2",
 		"font-awesome": "^4.7.0",
 		"font-awesome-sass-loader": "^2.0.1",
 		"react": "^16.6.1",
